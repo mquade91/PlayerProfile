@@ -11,24 +11,45 @@
     <script src="./assets/scripts/script.js"></script>
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron">
           <div class="container">
             <h1 class="display-4">Smart Scout</h1>
             <p class="lead">Observe, manage and take your talent to the next nevel</p>
           </div>
-                <div class="display-container">
-                  <img class="mySlides" src="./assets/images/logo.png" style="width:100%">
-                  <img class="mySlides" src="./assets/images/keeppounding.jpg" style="width:100%">
-                  <img class="mySlides" src="./assets/images/cam.jpg" style="width:100%">
-                  <img class="mySlides" src="./assets/images/mccaffrey.jpg" style="width:100%">
-                  <img class="mySlides" src="./assets/images/olsen.jpg" style="width:100%">
-                  <img class="mySlides" src="./assets/images/smith.jpg" style="width:100%">
-                  <img class="mySlides" src="./assets/images/stadium.jpg" style="width:100%">
-                  <img class="mySlides" src="./assets/images/team.jpg" style="width:100%">
-                    <button class="button-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                    <button class="button-display-right" onclick="plusDivs(1)">&#10095;</button>
-                </div>
     </div>
+          <div class="container">
+                  <div class="row">
+                      <div class="col-sm-9">
+                        <img class="mySlides" src="./assets/images/logo.png" style="width:100%">
+                        <img class="mySlides" src="./assets/images/keeppounding.jpg" style="width:100%">
+                        <img class="mySlides" src="./assets/images/cam.jpg" style="width:100%">
+                        <img class="mySlides" src="./assets/images/mccaffrey.jpg" style="width:100%">
+                        <img class="mySlides" src="./assets/images/olsen.jpg" style="width:100%">
+                        <img class="mySlides" src="./assets/images/smith.jpg" style="width:100%">
+                        <img class="mySlides" src="./assets/images/stadium.jpg" style="width:100%">
+                        <img class="mySlides" src="./assets/images/team.jpg" style="width:100%">
+                          <button class="button-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                          <button class="button-display-right" onclick="plusDivs(1)">&#10095;</button>
+                      </div>
+                      <div class="col-sm-3">
+                        <h1><span class = "fa fa-sign-in"></span>Login</h1> 
+                            <form action="/login" method="post">
+                              <div class="form-group">
+                                  <label>Email</label>
+                                  <input type="text" class="form-control" name="email">
+                              </div>
+                              <div class="form-group">
+                                  <label>Password</label>
+                                  <input type="password" class="form-control" name="password">
+                              </div>
+                                <button type="submit" class="btn btn-warning btn-lg">Login</button>
+                            </form>  
+                              <hr>
+                              <p>Need to an account?<a href="/signup">Sign Up</a></p>
+                              <p> Or Go <a href="/">Home</a>.</p>
+                    </div>
+              </div>
+            </div>
 
 </body>  
 
