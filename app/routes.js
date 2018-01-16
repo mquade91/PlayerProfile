@@ -4,10 +4,7 @@ var path = require('path');
 module.exports = function(app, passport) {
     //HOME PAGE (with login links)
     app.get("/", function(req, res) {
-        console.log(res);
-        //the code below is INCORRECT! perhaps i need res.sendFile(--dirname etc.)??
-        //res.render('index.html');
-        //res.render('index.ejs');
+        //console.log(res);
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
