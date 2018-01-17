@@ -1,9 +1,11 @@
 // app/routes.js
+var path = require('path');
 
 module.exports = function(app, passport) {
     //HOME PAGE (with login links)
     app.get("/", function(req, res) {
-        res.render('index.ejs');
+        //console.log(res);
+        res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
     //LOGIN (shows form)
