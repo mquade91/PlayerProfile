@@ -5,6 +5,7 @@ module.exports = function(app, passport) {
     //HOME PAGE (with login links)
     app.get("/", function(req, res) {
         //console.log(res);
+        //using index.html
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
@@ -15,11 +16,11 @@ module.exports = function(app, passport) {
     });
 
     //process the LOGIN form
-    app.post('/login', passport.authenticate('local-login', {
-        successRedirect: '/profile', //send to profile
-        failureRedirect: '/login', //redirect to signup
-        failureFlash: true //allow flash message
-    }));
+    // app.post('/login', passport.authenticate('local-login', {
+    //     successRedirect: '/profile', //send to profile
+    //     failureRedirect: '/', //redirect to signup
+    //     failureFlash: true //allow flash message
+    // }));
 
 
 
@@ -30,6 +31,7 @@ module.exports = function(app, passport) {
     });
 
     //process the sign up form (code is similar to POST route for login form)
+    //masnually loading similar to ADMIN giving SCOUTS logins
     app.post('/signup', passport.authenticate('local-signup', {
         successRedirect: '/profile', //secure profile page
         failureRedirect: '/signup', //signup page
