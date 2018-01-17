@@ -13,6 +13,7 @@ var session = require("express-session");
 
 
 var configDB = require('./config/database.js');
+console.log(configDB);
 
 //configuration(1)
 mongoose.connect(configDB.url);
@@ -32,7 +33,7 @@ mongoose.connect(configDB.url);
 // });
 
 // PASSPORT
-//require('./config/passport')(passport); //pass passport for configuration
+require('./config/passport')(passport); //pass passport for configuration
 
 //express application 
 app.use(morgan('dev'));

@@ -15,12 +15,12 @@ module.exports = function(app, passport) {
         res.render("login.ejs", { message: req.flash('loginMessage') });
     });
 
-    //process the LOGIN form
-    // app.post('/login', passport.authenticate('local-login', {
-    //     successRedirect: '/profile', //send to profile
-    //     failureRedirect: '/', //redirect to signup
-    //     failureFlash: true //allow flash message
-    // }));
+    // process the LOGIN form
+    app.post('/login', passport.authenticate('local-login', {
+        successRedirect: '/profile', //send to profile
+        failureRedirect: '/', //redirect to signup
+        failureFlash: true //allow flash message
+    }));
 
 
 
@@ -44,8 +44,7 @@ module.exports = function(app, passport) {
     //using route middleware to verify this (the isLoggedIn function)
     app.get('/profile', isLoggedIn, function(req, res) {
         res.render('profile.ejs', {
-            user: req.user //get the user out of session and pass to template
-
+            Scouter: req.Scouter //get the user out of session and pass to template
         });
     });
 

@@ -14,5 +14,5 @@ db.on("error", function(error) {
 });
 
 module.exports = {
-    'url': process.env.MONGODB_URI || "mongodb://localhost/playerProfile"
+  'url': process.env.MONGODB_URI || "mongodb://localhost/playerProfile"
 };

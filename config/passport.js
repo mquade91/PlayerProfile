@@ -3,8 +3,8 @@
 //load everyhting from passport
 var LocalStrategy = require('passport-local').Strategy;
 
-//Load up our USER model
-var User = require('../app/models/user');
+//Load up our SCOUTER model
+var Scouter = require('../app/models/scouter');
 
 module.exports = function(passport) {
     //pasport session setup
@@ -14,7 +14,7 @@ module.exports = function(passport) {
     });
 
     passport.deserializeUser(function(id, done) {
-        User.findById(id, function(err, user) {
+        Scouter.findById(id, function(err, user) {
             done(err, user);
         });
     });
@@ -33,31 +33,31 @@ module.exports = function(passport) {
 
         function(req, email, password, done) {
 
-            //User.find wont fire unless data is sent back
+            //Scouter.find wont fire unless data is sent back
             process.nextTick(function() {
 
-                User.findOne({ 'local.email': email }, function(err, user) {
+                Scouter.findOne({ 'Scouter.email': email }, function(err, Scouter) {
                     if (err)
                         return done(err);
 
-                    //check to see if theres already a user with that email
-                    if (user) {
+                    //check to see if theres already a scout with that email
+                    if (Scouter) {
                         return done(null, false, req.flash('signupMessage', "That email is already taken"));
                     }
                     else {
                         //if theres no user w/ tht email
 
-                        var newUser = new User();
+                        var newScouter = new Scouter();
 
                         //set credentials for user
-                        newUser.local.email = email;
-                        newUser.local.password = newUser.generateHash(password);
+                        newScouter.email = email;
+                        newScouter.password = newScouter.generateHash(password);
 
                         //save the user
-                        newUser.save(function(err) {
+                        newScouter.save(function(err) {
                             if (err)
                                 throw err;
-                            return done(null, newUser);
+                            return done(null, newScouter);
                         });
                     }
                 });
@@ -73,17 +73,17 @@ module.exports = function(passport) {
         },
         function(req, email, password, done) { //gettin email and password from the form
 
-            User.findOne({ 'local.email': email }, function(err, user) {
+            Scouter.findOne({ 'Scouter.email': email }, function(err, Scouter) {
                 if (err)
                     return done(err);
-                //if no user
-                if (!user)
-                    return done(null, false, req.flash('loginMessage', 'No User found.'));
+                //if no Scout
+                if (!Scouter)
+                    return done(null, false, req.flash('loginMessage', 'No Scout found.'));
                 //if password is not valid
-                if (!user.validPassword(password))
+                if (!Scouter.validPassword(password))
                     return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'));
                 //correct info
-                return done(null, user);
+                return done(null, Scouter);
             });
         }
     ));
