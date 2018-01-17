@@ -1,3 +1,4 @@
+//server.js
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 8080;
@@ -31,19 +32,20 @@ mongoose.connect(configDB.url);
 // });
 
 // PASSPORT
-require('./config/passport')(passport); //pass passport for configuration
+//require('./config/passport')(passport); //pass passport for configuration
 
 //express application 
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser());
 
+//may not need this depending on if we use EJS or not??
 app.set('view engine', 'ejs');
 
-//requires for passport
-app.use(session({ secret: 'superSecret' }));
+//required for passport
+app.use(session({ secret: 'appSecret' }));
 app.use(passport.initialize());
-app.use(passport.session()); //persisten login sessions
+app.use(passport.session()); //persistent login sessions
 app.use(flash()); //use connect-flash for flash messages
 
 //routes==============
