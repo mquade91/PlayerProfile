@@ -1,12 +1,13 @@
 body {
     margin: 0em;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 75%;
 }
 .jumbotron {
-    height: 100px;
+    height: 150px;
     margin: auto;
     text-align: center;
+    color: white;
     padding: 0;
     background-color: #4d85ff;
 }
@@ -57,7 +58,6 @@ body {
     height: 100%;
     display: none;
 }
-
 .footer {
     bottom: 0;
     background-color: #4d85ff;
