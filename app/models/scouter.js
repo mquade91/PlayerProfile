@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 //require bcrypt
 var bcrypt = require('bcrypt-nodejs');
 
-// Create a new CommentSchema object
+// Create a new ScouterSchema object
 var ScouterSchema = new Schema({
   firstName: {
     type: String,
@@ -15,12 +15,12 @@ var ScouterSchema = new Schema({
     type: String,
     required: true
   },
-  local: {
-    email: String,
+  email: {
+    type: String,
     required: true
   },
-  local: {
-    email: String,
+  password: {
+    type: String,
     required: true
   },
   areaCovered: {
@@ -40,7 +40,7 @@ ScouterSchema.methods.generateHash = function(password) {
 
 //checking if the PASSWORD is valid
 ScouterSchema.methods.validPassword = function(password) {
-  return bcrypt.compareSync(password, this.local.password);
+  return bcrypt.compareSync(password, this.Scouter.password);
 };
 
 // //CREATE the model for users and expose it to our App
