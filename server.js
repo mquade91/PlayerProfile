@@ -18,20 +18,6 @@ console.log(configDB);
 //configuration(1)
 mongoose.connect(configDB.url);
 
-////  This is the code in my config/database.js file 
-// module.exports = {
-
-//     'url' : "mongodb://localhost/loginApp"// looks like mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
-
-// };
-
-//configuration(2) if i wanted to include everything in my server.js and not have to require on line 14
-// mongoose.Promise = Promise;
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/loginApp";
-// mongoose.connect(MONGODB_URI, {
-//     useMongoClient: true
-// });
-
 // PASSPORT
 require('./config/passport')(passport); //pass passport for configuration
 

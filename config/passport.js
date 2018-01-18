@@ -3,18 +3,17 @@
 //load everyhting from passport
 var LocalStrategy = require('passport-local').Strategy;
 
-//Load up our SCOUTER model
-var Scouter = require('../app/models/scouter');
+//Load up our SCOUTER model has to be USER for PASSPORT
+var User = require('../app/models/user');
 
 module.exports = function(passport) {
     //pasport session setup
-
     passport.serializeUser(function(user, done) {
         done(null, user.id);
     });
 
     passport.deserializeUser(function(id, done) {
-        Scouter.findById(id, function(err, user) {
+        User.findById(id, function(err, user) {
             done(err, user);
         });
     });
@@ -36,34 +35,36 @@ module.exports = function(passport) {
             //Scouter.find wont fire unless data is sent back
             process.nextTick(function() {
 
-                Scouter.findOne({ 'Scouter.email': email }, function(err, Scouter) {
+                User.findOne({ 'local.email': email }, function(err, user) {
                     if (err)
                         return done(err);
 
                     //check to see if theres already a scout with that email
-                    if (Scouter) {
+                    if (user) {
                         return done(null, false, req.flash('signupMessage', "That email is already taken"));
                     }
                     else {
                         //if theres no user w/ tht email
 
-                        var newScouter = new Scouter();
+                        var newUser = new User();
 
                         //set credentials for user
-                        newScouter.email = email;
-                        newScouter.password = newScouter.generateHash(password);
+                        newUser.email = email;
+                        newUser.password = newUser.generateHash(password);
 
                         //save the user
-                        newScouter.save(function(err) {
+                        newUser.save(function(err) {
                             if (err)
                                 throw err;
-                            return done(null, newScouter);
+                            return done(null, newUser);
                         });
                     }
                 });
             });
         }
     ));
+
+
     //LOCAL SIGN IN
     passport.use('local-login', new LocalStrategy({
 
@@ -73,7 +74,7 @@ module.exports = function(passport) {
         },
         function(req, email, password, done) { //gettin email and password from the form
 
-            Scouter.findOne({ 'Scouter.email': email }, function(err, Scouter) {
+            User.findOne({ 'local.email': email }, function(err, Scouter) {
                 if (err)
                     return done(err);
                 //if no Scout

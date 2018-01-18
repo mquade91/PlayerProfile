@@ -4,8 +4,8 @@ var path = require('path');
 module.exports = function(app, passport) {
     //HOME PAGE (with login links)
     app.get("/", function(req, res) {
-        //console.log(res);
-        //using index.html
+
+        //using index.html that have 'local-login' and 'local signup'
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
@@ -22,21 +22,18 @@ module.exports = function(app, passport) {
         failureFlash: true //allow flash message
     }));
 
-
-
     //SIGNUP (show signup form)
     app.get('/signup', function(req, res) {
         //render the page and pass any flash data if exists
         res.render('signup.ejs', { message: req.flash('signupMessage') });
     });
 
-    //process the sign up form (code is similar to POST route for login form)
-    //masnually loading similar to ADMIN giving SCOUTS logins
+    //process the SIGN UP FORM (code is similar to POST route for login form)
+
     app.post('/signup', passport.authenticate('local-signup', {
         successRedirect: '/profile', //secure profile page
         failureRedirect: '/signup', //signup page
         failureFlash: true //allow flash messages
-
     }));
 
     //PROFILE section
@@ -44,7 +41,7 @@ module.exports = function(app, passport) {
     //using route middleware to verify this (the isLoggedIn function)
     app.get('/profile', isLoggedIn, function(req, res) {
         res.render('profile.ejs', {
-            Scouter: req.Scouter //get the user out of session and pass to template
+            user: req.user //get the user out of session and pass to template
         });
     });
 
