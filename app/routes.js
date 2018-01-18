@@ -4,7 +4,8 @@ var path = require('path');
 module.exports = function(app, passport) {
     //HOME PAGE (with login links)
     app.get("/", function(req, res) {
-        //console.log(res);
+
+        //using index.html that have 'local-login' and 'local signup'
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
@@ -14,14 +15,12 @@ module.exports = function(app, passport) {
         res.render("login.ejs", { message: req.flash('loginMessage') });
     });
 
-    //process the LOGIN form
+    // process the LOGIN form
     app.post('/login', passport.authenticate('local-login', {
         successRedirect: '/profile', //send to profile
-        failureRedirect: '/login', //redirect to signup
+        failureRedirect: '/', //redirect to signup
         failureFlash: true //allow flash message
     }));
-
-
 
     //SIGNUP (show signup form)
     app.get('/signup', function(req, res) {
@@ -29,12 +28,12 @@ module.exports = function(app, passport) {
         res.render('signup.ejs', { message: req.flash('signupMessage') });
     });
 
-    //process the sign up form (code is similar to POST route for login form)
+    //process the SIGN UP FORM (code is similar to POST route for login form)
+
     app.post('/signup', passport.authenticate('local-signup', {
         successRedirect: '/profile', //secure profile page
         failureRedirect: '/signup', //signup page
         failureFlash: true //allow flash messages
-
     }));
 
     //PROFILE section
@@ -43,7 +42,6 @@ module.exports = function(app, passport) {
     app.get('/profile', isLoggedIn, function(req, res) {
         res.render('profile.ejs', {
             user: req.user //get the user out of session and pass to template
-
         });
     });
 
