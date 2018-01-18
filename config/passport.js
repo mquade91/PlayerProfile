@@ -19,7 +19,6 @@ module.exports = function(passport) {
     });
 
     //LOCAL SIGN UP
-
     passport.use('local-signup', new LocalStrategy({
             //default
             //userNameField: 'username'
@@ -49,9 +48,13 @@ module.exports = function(passport) {
                         var newUser = new User();
 
                         //set credentials for user
-                        newUser.email = email;
-                        newUser.password = newUser.generateHash(password);
-
+                        newUser.local.email = email;
+                        newUser.local.password = newUser.generateHash(password);
+                        newUser.info = {
+                            firstName: newUser.firstName,
+                            lastName: newUser.lastName,
+                            areaCovered: newUser.areaCovered
+                        };
                         //save the user
                         newUser.save(function(err) {
                             if (err)
