@@ -1,13 +1,12 @@
 /* global $ axios */
 console.log("AC");
 var express = require("express");
-var app = express();
 var router = express.Router();
 // var axios = require("axios");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var db = require("../models");
+var db = require("../app/models");
 
 // When a browser calls for the site, get the login page.
 router.get("/", function(req,res) {
