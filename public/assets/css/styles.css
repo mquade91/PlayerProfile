@@ -2,16 +2,22 @@ body {
     margin: 0em;
     width: 100%;
     height: 75%;
+    background-color: #87CEFA;
+    font-family: 'Montserrat', sans-serif;
 }
 .jumbotron {
+    font-style: italic;
     height: 150px;
     margin: auto;
     text-align: center;
     color: white;
     padding: 0;
-    background-color: #4d85ff;
+    background-color: #87CEFA;
 }
-
+.navbar {
+    background-color: #87CEFA;
+    border-color: #87CEFA;
+}
 .button-display-left {
     color: #fffimportant;
     background-color: #000important;
