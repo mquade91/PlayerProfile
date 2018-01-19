@@ -15,14 +15,6 @@ var ScouterSchema = new Schema({
     type: String,
     required: true
   },
-  local: {
-    email: String,
-    required: true
-  },
-  local: {
-    email: String,
-    required: true
-  },
   areaCovered: {
     type: String,
     required: true
