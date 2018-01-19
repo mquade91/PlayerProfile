@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Loggin' App</title>
+        <title>Smart Scout</title>
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
         <style>
@@ -27,7 +27,9 @@
                             <strong>ID</strong>: <%= user._id %><br>
                             <strong>Email</strong>: <%= user.local.email %><br>
                             <strong>Password</strong>: <%= user.local.password %><br>
-                            <strong>Info</strong>: <%= user.info %><br>
+                            <strong>First Name</strong>: <%= user.info.firstName %><br>
+                            <strong>Last Name</strong>: <%= user.info.lastName %><br>
+                            <strong>Area Covered</strong>: <%= user.info.areaCovered %><br>
                         </p>
                     </div>
                 </div>
