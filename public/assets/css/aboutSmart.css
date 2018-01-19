@@ -1,0 +1,40 @@
+.jumbotron {
+    text-align: center;
+    height: 150px;
+    padding: 0;
+    background-color: #4d85ff;
+}
+#jumboCenter {
+    margin-top: 20px;
+    width: 50%;
+    float: left;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.footer {
+    bottom: 0;
+    background-color: #4d85ff;
+    color: white;
+    text-align: center;
+    display:block;
+}
+.alink:link {
+    color: white;
+}
+
+.alink:hover {
+    color: #ccffff;
+}
+
+.alink:visited {
+    color: white;
+}
+.icons {
+    width: 30px;
+    margin-top: 5px;
+}
+@media (min-width: 1680) {
+.container {
+width: 1640;
+}
+}
