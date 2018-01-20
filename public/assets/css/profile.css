@@ -1,13 +1,4 @@
-
-
-
-.jumbotron {
-    /*border-style: solid;*/
-
-    /*border-color: #87cefa;*/
-
-    /*border-width: 5px;*/
-}
+.jumbotron {}
 
 
 #header {
@@ -31,4 +22,33 @@
     border-color: #87cefa;
     text-align: center;
     background-color: white;
+}
+
+.player-attributes {
+    color: red;
+    text-align: left;
+}
+
+.player-values {
+    font-size: 10px;
+    font-family: lucida calligraphy;
+
+}
+
+.categories {
+    font-size: 13px;
+}
+
+
+
+
+@media (min-width: 1680) {
+    .container {
+        width: 1640;
+    }
+
+    .jumbotron {
+        width: 1640;
+        height: 30%;
+    }
 }
