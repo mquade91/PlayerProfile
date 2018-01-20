@@ -1,0 +1,34 @@
+
+
+
+.jumbotron {
+    /*border-style: solid;*/
+
+    /*border-color: #87cefa;*/
+
+    /*border-width: 5px;*/
+}
+
+
+#header {
+    text-align: center;
+}
+
+.container {
+    background-color: #87cefa;
+}
+
+#inner-jumbotron {
+    border-style: solid;
+    border-color: #87cefa;
+    border-width: 10px;
+}
+
+
+
+#playerCard {
+    border-style: solid;
+    border-color: #87cefa;
+    text-align: center;
+    background-color: white;
+}
