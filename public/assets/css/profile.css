@@ -1,4 +1,9 @@
-.jumbotron {}
+.jumbotron {
+    border-style: solid;
+    border-color: #87cefa;
+    border-width: 10px;
+
+}
 
 
 #header {
