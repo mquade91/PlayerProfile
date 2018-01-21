@@ -6,13 +6,15 @@ body {
     background-image: url("./assets/images/background.jpg");
     font-family: 'Montserrat', sans-serif;
 }
+
 .login-wrapper {
     display: block;
     width: 400px;
     clear: both;
-    margin:0 auto 10px;
-    
+    margin: 0 auto 10px;
+
 }
+
 .jumbotron {
     font-style: italic;
     height: 150px;
@@ -22,21 +24,25 @@ body {
     padding: 0;
     background-color: #87CEFA;
 }
+
 .navbar {
     background-color: #87CEFA;
     border-color: #87CEFA;
 }
+
 .login {
     text-align: center;
-    
+
 }
+
 .footer {
     bottom: 0;
     background-color: #4d85ff;
     color: white;
     text-align: center;
-    display:block;
+    display: block;
 }
+
 .foot {
     display: inline-block;
     font-size: 14px;
@@ -61,8 +67,14 @@ body {
     margin-top: 5px;
 }
 
+
+
+
+
+/*------------------------*/
+
 @media (min-width: 1680) {
-.container {
-width: 1640;
-}
+    .container {
+        width: 1640;
+    }
 }
