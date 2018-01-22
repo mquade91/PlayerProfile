@@ -56,6 +56,11 @@ module.exports = function(app, passport) {
         res.redirect('/');
     });
 
+    //get NEW PLAYER FORM
+    app.get('/newPlayer', function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/newPlayer.html"));
+    });
+
 };
 
 //route middleware to make sure a user is logged in
