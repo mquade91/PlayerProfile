@@ -1,0 +1,150 @@
+.jumbotron {
+    font-style: italic;
+    height: 150px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 0;
+    background-color: #87CEFA;
+}
+
+.navbar {
+    background-color: #87CEFA;
+    border-color: #87CEFA;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-auto-rows: minmax(100, auto);
+    font-family: 'Arial Narrow', sans-serif;
+}
+
+.left {
+    grid-row: 1;
+    display: grid;
+    min-width: 250px;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.individualPhoto {
+    width: 50px;
+}
+
+.leftTop {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    grid-auto-rows: min-content max-content;
+    font-weight: bold;
+}
+
+.Matt {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.Eddie {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.Michael {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.Chas {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.right {
+    display: grid;
+    width: 250px;
+    grid-row: 1;
+    grid-template-columns: 1fr;
+}
+
+.rightTop {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    text-align: center;
+    font-weight: bold;
+}
+
+.officePhoto {
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+
+#officePicture {
+    width: 250px;
+}
+
+.officeInfo {
+    grid-column: 3 / 4;
+    grid-row: 3;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.officeInfo p {
+    margin: 0;
+    padding: 0;
+}
+.center {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 3fr;
+}
+
+.centerTop {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    grid-auto-rows: minmax(100, auto);
+}
+
+.individualDetails {
+    grid-template-area: img, content;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+/*Footer*/
+.footer {
+    bottom: 0;
+    background-color: #4d85ff;
+    color: white;
+    text-align: center;
+    display:block;
+}
+.foot {
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px 20px 0px 20px;
+    position: relative;
+}
+
+.alink:link {
+    color: white;
+}
+
+.alink:hover {
+    color: #ccffff;
+}
+
+.alink:visited {
+    color: #e6ccff;
+}
+
+.icons {
+    width: 30px;
+    margin-top: 5px;
+}
+
+
