@@ -60,6 +60,12 @@ module.exports = function(app, passport) {
     app.get('/newPlayer', function(req, res) {
         res.sendFile(path.join(__dirname, "../public/newPlayer.html"));
     });
+    
+    //get ALL PLAYERS
+    app.get('/athletes', function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/profile.html"));
+    });
+
 
 };
 
