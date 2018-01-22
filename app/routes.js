@@ -40,6 +40,11 @@ module.exports = function(app, passport) {
     //must be logged in to visit this page
     //using route middleware to verify this (the isLoggedIn function)
     app.get('/profile', isLoggedIn, function(req, res) {
+
+        // res.sendFile(path.join(__dirname, "../public/index.html", {
+        //     user: req.user //get the user out of session and pass to template
+        // }));
+
         res.render('profile.ejs', {
             user: req.user //get the user out of session and pass to template
         });
@@ -49,6 +54,11 @@ module.exports = function(app, passport) {
     app.get('/logout', function(req, res) {
         req.logout();
         res.redirect('/');
+    });
+
+    //get NEW PLAYER FORM
+    app.get('/newPlayer', function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/newPlayer.html"));
     });
 
 };
