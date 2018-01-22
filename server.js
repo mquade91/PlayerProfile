@@ -26,6 +26,10 @@ app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser());
 
+
+//use express static to server the public folder as static directory
+app.use(express.static("public"));
+
 //may not need this depending on if we use EJS or not??
 app.set('view engine', 'ejs');
 
