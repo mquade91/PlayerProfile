@@ -12,99 +12,99 @@
     <link rel="stylesheet" href="./assets/css/styles.css" type="text/css" />
     <script src="./assets/scripts/script.js"></script>
   </head>
+
   <body>
-    
+
     <div class="jumbotron">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="navbar">
-        <a class="navbar-brand" href="/">SmartScout</a>
-        <img src="./assets/images/logo.png" width="120" alt="Bootstrappin">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="/">SmartScout</a>
+          <img src="./assets/images/logo.png" width="120" alt="Bootstrappin">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Current Team
-                      </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="http://www.panthers.com/team/roster.html">Current Roster</a>
-                <a class="dropdown-item" href="http://www.panthers.com/team/standings.html">2018 Standing</a>
-                <a class="dropdown-item" href="http://www.panthers.com/news/article-2/Panthers-2018-opponents-set/7d37a1a1-6a43-41ee-8785-203b702e5af4">2018 Schedule</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Current Coaching staff
+                        Current Team
                       </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="http://www.panthers.com/team/roster.html">Current Roster</a>
+                  <a class="dropdown-item" href="http://www.panthers.com/team/standings.html">2018 Standing</a>
                   <a class="dropdown-item" href="http://www.panthers.com/news/article-2/Panthers-2018-opponents-set/7d37a1a1-6a43-41ee-8785-203b702e5af4">2018 Schedule</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Upcoming Free Agents 
+                        Current Coaching staff
                       </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="http://www.panthers.com/news/article-2/Panthers-potential-free-agents-in-2018/5e5884b9-3ba3-4838-82ab-4e10903ae043">Teams' Free Agents </a>
-                    <a class="dropdown-item" href="http://www.spotrac.com/nfl/free-agents/">2018 Free Agents Market  </a>
+                    <a class="dropdown-item" href="http://www.panthers.com/news/article-2/Panthers-2018-opponents-set/7d37a1a1-6a43-41ee-8785-203b702e5af4">2018 Schedule</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
                   </div>
-                </li>
-          </ul>
-        </div>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Upcoming Free Agents 
+                      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="http://www.panthers.com/news/article-2/Panthers-potential-free-agents-in-2018/5e5884b9-3ba3-4838-82ab-4e10903ae043">Teams' Free Agents </a>
+                      <a class="dropdown-item" href="http://www.spotrac.com/nfl/free-agents/">2018 Free Agents Market  </a>
+                    </div>
+                  </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </div>
     <div class="container">
-          <div class="login-wrapper">
-          <!--temporarily added login buttons to the page-->
-              <h1>USE THESE FOR LOGIN/SIGNUP NOW!!!(BELOW)</h1>
-              <a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
-              <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
-              <h1><span class="fa fa-sign-in"></span>Login(DOES NOT WORK)</h1>
-              <form action="/login" method="post">
-                <div class="form-group">
-                  <label>Email</label>
-                  <input type="text" class="form-control" name="email">
-                </div>
-                <div class="form-group">
-                  <label>Password</label>
-                  <input type="password" class="form-control" name="password">
-                </div>
-                <button type="submit" class="btn btn-warning btn-lg">Login</button>
-              </form>
-              <hr>
-              <p>Need to an account?<a href="/signup">Sign Up</a></p>
-              <p> Or Go <a href="/">Home</a>.</p>
+
+      <div class="login-wrapper">
+        <h1><span class="fa fa-sign-in"></span>Login</h1>
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email">
           </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password">
+          </div>
+          <button type="submit" class="btn btn-warning btn-lg">Login</button>
+        </form>
+        <hr>
+        <p>Need to an account?<a href="/signup">Sign Up</a></p>
+        <p> Or Go <a href="/">Home</a>.</p>
+      </div>
+
     </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="footer">
-            <div class="foot">
-              <a id="bit" class="alink" href="aboutSmart.html">About ScoutSmart</a>
-            </div>
-            <div class="foot">
-              <a href="http://facebook.com" target="_blank"><img class="icons" src="./assets/images/facebook.png" alt="Facebook Icon and Link"/></a>
-            </div>
-            <div class="foot">
-              <a href="http://twitter.com" target="_blank"><img class="icons" src="./assets/images/twitter.png" alt="Twitter Icon and Link"/></a>
-            </div>
-            <div class="foot">
-              <a id="tandp" class="alink" href="tandp.html">Terms and Privacy</a>
-            </div>
-            <div class="foot">
-              <a id="contact" class="alink" href="contact.html">Contact Us</a>
-            </div>
-            <div class="subfooter">
-              <div id="copyright">Copyright © 2018 Scout Smart</div>
-            </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer">
+          <div class="foot">
+            <a id="bit" class="alink" href="aboutSmart.html">About ScoutSmart</a>
+          </div>
+          <div class="foot">
+            <a href="http://facebook.com" target="_blank"><img class="icons" src="./assets/images/facebook.png" alt="Facebook Icon and Link"/></a>
+          </div>
+          <div class="foot">
+            <a href="http://twitter.com" target="_blank"><img class="icons" src="./assets/images/twitter.png" alt="Twitter Icon and Link"/></a>
+          </div>
+          <div class="foot">
+            <a id="tandp" class="alink" href="tandp.html">Terms and Privacy</a>
+          </div>
+          <div class="foot">
+            <a id="contact" class="alink" href="contact.html">Contact Us</a>
+          </div>
+          <div class="subfooter">
+            <div id="copyright">Copyright © 2018 Scout Smart</div>
           </div>
         </div>
       </div>
+    </div>
+    </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
