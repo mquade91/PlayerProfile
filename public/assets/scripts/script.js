@@ -2,30 +2,28 @@
 $(document).ready(function() {
     console.log("scipt connected");
 
-    var firstname;
-    var lastname;
-    var height;
-    var weight;
-    var dash;
-    var school;
-    var positionrating;
-    var overallrank;
-    var comments;
-    var listData = [];
-
     $("#submit").on("click", function(event) {
-        event.preventDefault();
-        console.log("NewPlayer");
+        var firstname;
+        var lastname;
+        var height;
+        var weight;
+        var dash;
+        var school;
+        var positionrating;
+        var overallrank;
+        var comments;
+        var listData = [];
+
         //Save the data
-        firstname = $("#firstname").val().trim();
-        lastname = $("#lastname").val().trim();
-        height = $("#height").val().trim();
-        weight = $("weight").val().trim();
-        dash = $("#dash").val().trim();
-        school = $("#school").val().trim();
-        positionrating = $("#positionrating").val().trim();
-        overallrank = $("#overallrank").val().trim();
-        comments = $("#comments").val().trim();
+        firstname = $("#firstname").val();
+        lastname = $("#lastname").val();
+        height = $("#height").val();
+        weight = $("weight").val();
+        dash = $("#dash").val();
+        school = $("#school").val();
+        positionrating = $("#positionrating").val();
+        overallrank = $("#overallrank").val();
+        comments = $("#comments").val();
         listData = [
             firstname,
             lastname,

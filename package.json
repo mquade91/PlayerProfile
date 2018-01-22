@@ -10,12 +10,25 @@
     "express": "^4.14.1",
     "express-session": "~1.14.1",
     "method-override": "~2.3.6",
+    "mongojs": "^2.4.1",
     "mongoose": "^4.13.9",
     "morgan": "^1.7.0",
     "passport": "^0.3.2",
     "passport-local": "~1.0.0"
   },
+<<<<<<< HEAD
   "devDependencies": {
     "mongojs": "^2.4.1"
+=======
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.14.11"
+>>>>>>> 973845b6d37fd0e4aa1e313956f4d1149338bd28
   }
 }
