@@ -1,8 +1,8 @@
 var mongoose = require("mongoose");
-// Save a reference to the Schema constructor
+
 var Schema = mongoose.Schema;
 // Using this constructor, create a new UserSchema object
-var AthleteSchema = new Schema({
+var AthleteSchema =  Schema({
   firstName: {
     type: String,
     required: true
@@ -26,9 +26,9 @@ var AthleteSchema = new Schema({
   position: {
     type: String
   },
-  positionRating: {
-    type: Number
-  },
+  // positionRating: {
+  //   type: Number
+  // },
   overallRank: {
     type: Number
   },
@@ -43,9 +43,9 @@ var AthleteSchema = new Schema({
   // Store the ObjectId of a scouter section
   // The ref property links the ObjectId to the Scouter model
   // This allows us to populate the Athlete with an associated Scouter
-  scouter: {
+  user: {
     type: Schema.Types.ObjectId,
-    ref: "Scouter"
+    ref: "User"
   }
 });
 
