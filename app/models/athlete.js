@@ -24,22 +24,18 @@ var AthleteSchema =  Schema({
     type: String
   },
   position: {
-    type: String
+    type: String,
+    required:true
   },
-  // positionRating: {
-  //   type: Number
-  // },
+  positionRating: {
+    type: Number
+  },
   overallRank: {
     type: Number
   },
-  // Store the ObjectId of a comment section
-  // The ref property links the ObjectId to the Comment model
-  // This allows us to populate the Athlete with an associated Comment
   comment: {
-    type: Schema.Types.ObjectId,
-    ref: "Comment"
+    type: String,
   },
-
   // Store the ObjectId of a scouter section
   // The ref property links the ObjectId to the Scouter model
   // This allows us to populate the Athlete with an associated Scouter
