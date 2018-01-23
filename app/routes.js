@@ -76,11 +76,28 @@ module.exports = function(app, passport) {
         res.sendFile(path.join(__dirname, "../public/profile.html"));
     });
     
-     //get ALL PLAYERS INFO
+     //get ALL ATHLETES INFO
     app.get('/athletesInfo', function(req, res) {
     db.Athlete
     .find({})
-    .sort({"ranking":-1})
+    .sort({"lastName":-1})
+    .populate("user")
+    .then(function(dbAthletes) {
+      // If we were able to successfully find Athletes
+      res.json(dbAthletes);
+      console.log(dbAthletes);
+    })
+    .catch(function(err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+    
+    
+    // get ATHLETE by LASTNAME
+    app.get("/athletesInfo/:lastname", function(req, res) {
+    db.Athlete
+    .find({lastName: req.params.lastname})
+    
     .populate("user")
     .then(function(dbAthletes) {
       // If we were able to successfully find Athletes
@@ -92,9 +109,7 @@ module.exports = function(app, passport) {
       res.json(err);
     });
 });
-
-
-
+});
 
 
 };
@@ -108,3 +123,6 @@ function isLoggedIn(req, res, next) {
     //if not redirect to the home page
     res.redirect('/');
 }
+
+
+// Select just one note by an id

@@ -86,7 +86,8 @@ router.get("/athletes/", function(req, res) {
   db.Athletes
     .find({})
     .sort({"ranking":-1})
-    .populate("scouter")
+    .populate("s
+    couter")
     .then(function(dbAthletes) {
       // If we were able to successfully find Athletes
       res.json(dbAthletes);
@@ -136,3 +137,5 @@ router.put("/athletes/:id", function(req, res) {
 });
 
 module.exports = router;
+
+
