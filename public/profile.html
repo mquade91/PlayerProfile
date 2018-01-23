@@ -2,200 +2,300 @@
 
 <html lang="en-us">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Player Profile</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Player Profile</title>
 
 
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <!--Materialize CDN-->
+    <!--Materialize CDN-->
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
 
-        <!-- Viewport -->
+    <!-- Viewport -->
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!--Profile Stylesheet-->
-        <link rel="stylesheet" href="./assets/css/profile.css" type="text/css" />
+    <!--Profile Stylesheet-->
+    <link rel="stylesheet" href="./assets/css/profile.css" type="text/css" />
 
-    </head>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
 
-    <body>
-        <br>
-        <div class="row">
-            <!--<div class="container">-->
-            <!--<div class="col-md-3"></div>-->
-            <div class="col-md-12" id="header">
-                <span>
+</head>
+
+<body>
+    <br>
+    <div class="row">
+        <!--<div class="container">-->
+        <!--<div class="col-md-3"></div>-->
+        <div class="col-md-12" id="header">
+            <span>
                 <h2>SmartScout  <a href="index.html"><img id="panthers" src="./assets/images/logo.png" width="100px"></a></h2>
                 <h6></h6>
             </span>
-            </div>
+
             <!--<div class="col-md-3"></div>-->
-            <!--</div>-->
+            <!--<div class="col-md-6">-->
+            <div id="navbar" class="navbarContainer">
 
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <!--<div class="navbar-header">-->
+                        <button id="navbutton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<!--<span class="sr-only">Toggle navigation</span>-->
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                          </button>
+                        <!--</div>-->
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Show My Players</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Players By Position <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">QB</a></li>
+                                        <li><a href="#">RB</a></li>
+                                        <li><a href="#">WR</a></li>
+                                        <li><a href="#">FB</a></li>
+                                        <li><a href="#">TE</a></li>
+                                        <li><a href="#">OL</a></li>
+                                        <li><a href="#">DB</a></li>
+                                        <li><a href="#">FS</a></li>
+                                        <li><a href="#">SS</a></li>
+                                        <li><a href="#">DL</a></li>
+                                        <li><a href="#">K</a></li>
+                                        <li><a href="#">P</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Players By Rank <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Best to Worst</a></li>
+                                        <li><a href="#">Worst to Best</a></li>
+
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </div>
         </div>
+        <div class="col-md-3"></div>
 
-        <div class="container" id="jumbotron">
 
-            <div class="jumbotron" style="background-color:white">
+    </div>
+    <h5 id="top5">Top 5 Talents Showcase</h5>
+    <!--<div class="col-md-3"></div>-->
+    <!--</div>-->
 
-                <div id="container">
+    </div>
 
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                        </ol>
 
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="./assets/images/cam.jpg" alt="Newton" style="width:100%;">
+
+    <div class="container" id="jumbotron">
+
+
+        <div class="jumbotron" style="background-color:white">
+
+            <div id="carousel-container">
+
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+
+                    <ol class="carousel-indicators">
+                        <li id="indicators" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li id="indicators" data-target="#myCarousel" data-slide-to="1"></li>
+                        <li id="indicators" data-target="#myCarousel" data-slide-to="2"></li>
+                        <li id="indicators" data-target="#myCarousel" data-slide-to="3"></li>
+                        <li id="indicators" data-target="#myCarousel" data-slide-to="4"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <div id="playerCard">
+                                <h5 id="playerName"><a href="https://www.google.com">Player Name</a></h5>
+                                <div class="row"></div>
+                                <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-4">
+                                        <ul class="player-attributes">
+                                            <li id="height" class="categories">Height: <span class="player-values" id="height">1</span></li>
+                                            <br>
+                                            <li id="weight" class="categories">Weight: <span class="player-values" id="weight">150</span></li>
+                                            <br>
+                                            <li id="fortyTime" class="categories">40-yd: <span class="player-values" id="fortyTime">4.3</span></li>
+                                            <br>
+                                            <li id="position" class="categories">Position: <span class="player-values" id="position">WR</span></li>
+                                            <br>
+                                            <li id="rating" class="categories">Rating: <span class="player-values" id="rating">10</span></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a target="_blank" href="/HOMEWORK/HW-14/clicky/src"><img id="card-photo" src="http://via.placeholder.com/165X190"></a>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
                             </div>
-
-                            <div class="item">
-                                <img src="./assets/images/mccaffrey.jpg" alt="McCaffrey" style="width:100%;">
-                            </div>
-
-                            <div class="item">
-                                <img src="./assets/images/olsen.jpg" alt="Olsen" style="width:100%;">
-                            </div>
-
-                            <div class="item">
-                                <img src="./assets/images/smith.jpg" alt="Smith" style="width:100%;">
-                            </div>
-
-
                         </div>
 
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <div class="item">
+                            <div id="playerCard">
+                                <h5 id="playerName"><a href="https://www.google.com">Player Name</a></h5>
+                                <div class="row"></div>
+                                <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-4">
+                                        <ul class="player-attributes">
+                                            <li id="height" class="categories">Height: <span class="player-values" id="height">2</span></li>
+                                            <br>
+                                            <li id="weight" class="categories">Weight: <span class="player-values" id="weight">150</span></li>
+                                            <br>
+                                            <li id="fortyTime" class="categories">40-yd: <span class="player-values" id="fortyTime">4.3</span></li>
+                                            <br>
+                                            <li id="position" class="categories">Position: <span class="player-values" id="position">WR</span></li>
+                                            <br>
+                                            <li id="rating" class="categories">Rating: <span class="player-values" id="rating">10</span></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/165X190"></a>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div id="playerCard">
+                                <h5 id="playerName"><a href="https://www.google.com">Player Name</a></h5>
+                                <div class="row"></div>
+                                <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-4">
+                                        <ul class="player-attributes">
+                                            <li id="height" class="categories">Height: <span class="player-values" id="height">3</span></li>
+                                            <br>
+                                            <li id="weight" class="categories">Weight: <span class="player-values" id="weight">150</span></li>
+                                            <br>
+                                            <li id="fortyTime" class="categories">40-yd: <span class="player-values" id="fortyTime">4.3</span></li>
+                                            <br>
+                                            <li id="position" class="categories">Position: <span class="player-values" id="position">WR</span></li>
+                                            <br>
+                                            <li id="rating" class="categories">Rating: <span class="player-values" id="rating">10</span></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/165X190"></a>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div id="playerCard">
+                                <h5 id="playerName"><a href="https://www.google.com">Player Name</a></h5>
+                                <div class="row"></div>
+                                <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-4">
+                                        <ul class="player-attributes">
+                                            <li id="height" class="categories">Height: <span class="player-values" id="height">4</span></li>
+                                            <br>
+                                            <li id="weight" class="categories">Weight: <span class="player-values" id="weight">150</span></li>
+                                            <br>
+                                            <li id="fortyTime" class="categories">40-yd: <span class="player-values" id="fortyTime">4.3</span></li>
+                                            <br>
+                                            <li id="position" class="categories">Position: <span class="player-values" id="position">WR</span></li>
+                                            <br>
+                                            <li id="rating" class="categories">Rating: <span class="player-values" id="rating">10</span></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/165X190"></a>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div id="playerCard">
+                                <h5 id="playerName"><a href="https://www.google.com">Player Name</a></h5>
+                                <div class="row"></div>
+                                <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-4">
+                                        <ul class="player-attributes">
+                                            <li id="height" class="categories">Height: <span class="player-values" id="height">5</span></li>
+                                            <br>
+                                            <li id="weight" class="categories">Weight: <span class="player-values" id="weight">150</span></li>
+                                            <br>
+                                            <li id="fortyTime" class="categories">40-yd: <span class="player-values" id="fortyTime">4.3</span></li>
+                                            <br>
+                                            <li id="position" class="categories">Position: <span class="player-values" id="position">WR</span></li>
+                                            <br>
+                                            <li id="rating" class="categories">Rating: <span class="player-values" id="rating">10</span></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/165X190"></a>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                       <span class="glyphicon glyphicon-chevron-left"></span>
                       <span class="sr-only">Previous</span>
                     </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
                       <span class="glyphicon glyphicon-chevron-right"></span>
                       <span class="sr-only">Next</span>
                     </a>
-                    </div>
                 </div>
-
-            </div>
-        </div>
-
-        <br>
-        <br>
-
-
-
-        <div class="row">
-            <div class="container">
-
-                <div id="playerCard" class="col-md-4">
-                    <h5><a href="#reactPlayerCard">Player Name</a></h5>
-
-                    <div class="row">
-                        <div class="col-md-5">
-                            <ul class="player-attributes">
-                                <li class="categories">Height: <span class="player-values" id="height">6'2"</span></li>
-                                <li class="categories">Weight: <span class="player-values" id="weight">150</span></li>
-                                <li class="categories">40-yd: <span class="player-values" id="fortyTime">4.3</span></li>
-                                <li class="categories">Position: <span class="player-values" id="position">WR</span></li>
-                                <li class="categories">Rating: <span class="player-values" id="rating">10</span></li>
-                            </ul>
-
-                        </div>
-                        <div class="col-md-0.5"></div>
-                        <div class="col-md-6.5">
-                            <img src="http://via.placeholder.com/100x115">
-                        </div>
-
-
-
-                    </div>
-                </div>
-
-                <div id="playerCard" class="col-md-4">
-                    <h5><a href="#reactPlayerCard">Player Name</a></h5>
-                    <div class="row">
-                        <div class="col-md-5">
-                            <ul class="player-attributes">
-                                <li class="categories">Height: <span class="player-values" id="height">6'2"</span></li>
-                                <li class="categories">Weight: <span class="player-values" id="weight">150</span></li>
-                                <li class="categories">40-yd: <span class="player-values" id="fortyTime">4.3</span></li>
-                                <li class="categories">Position: <span class="player-values" id="position">WR</span></li>
-                                <li class="categories">Rating: <span class="player-values" id="rating">10</span></li>
-                            </ul>
-
-                        </div>
-                        <div class="col-md-0.5"></div>
-                        <div class="col-md-6.5">
-                            <img src="http://via.placeholder.com/100x115">
-                        </div>
-
-
-
-                    </div>
-
-
-                </div>
-
-                <div id="playerCard" class="col-md-4">
-                    <h5><a href="#reactPlayerCard">Player Name</a></h5>
-
-                    <div class="row">
-                        <div class="col-md-5">
-                            <ul class="player-attributes">
-                                <li class="categories">Height: <span class="player-values" id="height">6'2"</span></li>
-                                <li class="categories">Weight: <span class="player-values" id="weight">150</span></li>
-                                <li class="categories">40-yd: <span class="player-values" id="fortyTime">4.3</span></li>
-                                <li class="categories">Position: <span class="player-values" id="position">WR</span></li>
-                                <li class="categories">Rating: <span class="player-values" id="rating">10</span></li>
-                            </ul>
-
-                        </div>
-                        <div class="col-md-0.5"></div>
-                        <div class="col-md-6.5">
-                            <img src="http://via.placeholder.com/100x115">
-                        </div>
-
-
-
-                    </div>
-
-
-                </div>
-
             </div>
 
         </div>
+    </div>
 
-        <br>
+    <br>
+    <br>
+    <br>
 
-        <div class="row">
-            <div class="container">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <h2></h2>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-        </div>
-
-
-    </body>
+</body>
 
 </html>

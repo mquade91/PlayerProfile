@@ -1,5 +1,10 @@
 // app/routes.js
 var path = require('path');
+var mongoose = require("mongoose");
+mongoose.Promise = global.Promise
+// Require all models
+var db = require("./models");
+
 
 module.exports = function(app, passport) {
     //HOME PAGE (with login links)
@@ -40,11 +45,6 @@ module.exports = function(app, passport) {
     //must be logged in to visit this page
     //using route middleware to verify this (the isLoggedIn function)
     app.get('/profile', isLoggedIn, function(req, res) {
-
-        // res.sendFile(path.join(__dirname, "../public/index.html", {
-        //     user: req.user //get the user out of session and pass to template
-        // }));
-
         res.render('profile.ejs', {
             user: req.user //get the user out of session and pass to template
         });
@@ -61,10 +61,40 @@ module.exports = function(app, passport) {
         res.sendFile(path.join(__dirname, "../public/newPlayer.html"));
     });
     
-    //get ALL PLAYERS
+    //ADD NEW PLAYER
+    app.post('/newPlayer', function (req, res){
+        console.log("Body here" + req.body);
+        
+        db.Athlete.create(req.body)
+        .then(function(athlete) {
+            console.log("post create" + athlete);
+        });
+    });
+    
+    //get ALL PLAYERS PAGE
     app.get('/athletes', function(req, res) {
         res.sendFile(path.join(__dirname, "../public/profile.html"));
     });
+    
+     //get ALL PLAYERS INFO
+    app.get('/athletesInfo', function(req, res) {
+    db.Athlete
+    .find({})
+    .sort({"ranking":-1})
+    .populate("user")
+    .then(function(dbAthletes) {
+      // If we were able to successfully find Athletes
+      res.json(dbAthletes);
+      console.log(dbAthletes);
+    })
+    .catch(function(err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+});
+
+
+
 
 
 };
