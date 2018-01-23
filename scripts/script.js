@@ -9,11 +9,12 @@ $(document).ready(function() {
             firstname: $("#firstname").val().trim(),
             lastname: $("#lastname").val().trim(),
             height: $("#height").val().trim(),
-            weight: $("weight").val().trim(),
+            weight: $("#weight").val().trim(),
             dash: $("#dash").val().trim(),
             school: $("#school").val().trim(),
+            position: $("#school").val().trim(),
             positionrating: $("#positionrating").val().trim(),
-            overallrank: $("#overallrank").val().trim(),
+            overallrank: $("#overallrank").val(),
             comments: $("#comments").val().trim(),
         };
 
@@ -31,8 +32,9 @@ $(document).ready(function() {
                 $("#firstname").val().trim();
                 $("#lastname").val().trim();
                 $("#height").val().trim();
-                $("weight").val().trim();
+                $("#weight").val().trim();
                 $("#dash").val().trim();
+                $("#school").val().trim();
                 $("#school").val().trim();
                 $("#positionrating").val().trim();
                 $("#overallrank").val().trim();

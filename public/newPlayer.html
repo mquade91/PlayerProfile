@@ -10,45 +10,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/newPlayer.css" type="text/css" />
-   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="./assets/scripts/script.js"></script>
     
   </head>
   <body>
     <div class="container">
-    <div class="form">
-      <form id="formInput" action="/action_page.php">
-        <fieldset>
-          <legend>Athlete information:</legend>
+      <h1>Athlete information:</h1>
+        <form>
           <div class="form-group">
-            First name:<br>
-            <input type="text" id="firstname" name="firstname" value="">
-            <br>
+            <input type="text" class="form-control" id="firstname" aria-describedby="firstname" placeholder="Enter First Name">
           </div>
           <div class="form-group">
-            Last name:<br>
-            <input type="text" id="lastname" name="lastname" value="">
-            <br>
+            <input type="text" class="form-control" id="lastname" aria-describedby="lastname" placeholder="Enter Last Name">
           </div>
           <div class="form-group">
-            Height (in feet):<br>
-            <input type="text" id="height" name="height" value=""><br>
+            <input type="text" class="form-control" id="height" aria-describedby="height" placeholder="Enter Height in ft.">
           </div>
           <div class="form-group">
-            Weight (in lbs):<br>
-            <input type="text" id="weight" name="weight" value=""><br>
+            <input type="text" class="form-control" id="weight" aria-describedby="weight" placeholder="Enter Weight in lbs.">
           </div>
           <div class="form-group">
-            40-yard dash:<br>
-            <input type="text" id="dash" name="dash" value=""><br>
+          <input type="text" class="form-control" id="dash" aria-describedby="dash" placeholder="Enter 40yard dash time in sec.">
           </div>
           <div class="form-group">
-            School:<br>
-            <input type="text" id="school" name="school" value=""><br>
+          <input type="text" class="form-control" id="school" aria-describedby="lastname" placeholder="Enter Last Name">
           </div>
           <div class="form-group">
-            Position:<br>
-              <select class="form-control" id="position">
+              <select multiple class="form-control" id="position">
                 <option>QB</option>
                 <option>WR</option>
                 <option>RB</option>
@@ -65,24 +54,35 @@
           </div>
           <div class="form-group">
             Athletes' Position Rating:<br>
-                <span class="rating">
-                    <input type="radio" class="rating-input"
-                           id="rating-input-1-5" name="rating-input-1">
-                    <label for="rating-input-1-5" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                           id="rating-input-1-4" name="rating-input-1">
-                    <label for="rating-input-1-4" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                           id="rating-input-1-3" name="rating-input-1">
-                    <label for="rating-input-1-3" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                           id="rating-input-1-2" name="rating-input-1">
-                    <label for="rating-input-1-2" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                           id="rating-input-1-1" name="rating-input-1">
-                    <label for="rating-input-1-1" class="rating-star"></label>
-                </span>
+                <div class="col-lg-12">
+                    <div class="star-rating">
+                      <span class="fa fa-star-o" data-rating="1"></span>
+                      <span class="fa fa-star-o" data-rating="2"></span>
+                      <span class="fa fa-star-o" data-rating="3"></span>
+                      <span class="fa fa-star-o" data-rating="4"></span>
+                      <span class="fa fa-star-o" data-rating="5"></span>
+                      <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+                    </div>
+                  </div>
           </div>
+          <!--      <span class="rating">-->
+          <!--          <input type="radio" class="rating-input"-->
+          <!--                 id="rating-input-1-5" name="rating-input-1">-->
+          <!--          <label for="rating-input-1-5" class="rating-star"></label>-->
+          <!--          <input type="radio" class="rating-input"-->
+          <!--                 id="rating-input-1-4" name="rating-input-1">-->
+          <!--          <label for="rating-input-1-4" class="rating-star"></label>-->
+          <!--          <input type="radio" class="rating-input"-->
+          <!--                 id="rating-input-1-3" name="rating-input-1">-->
+          <!--          <label for="rating-input-1-3" class="rating-star"></label>-->
+          <!--          <input type="radio" class="rating-input"-->
+          <!--                 id="rating-input-1-2" name="rating-input-1">-->
+          <!--          <label for="rating-input-1-2" class="rating-star"></label>-->
+          <!--          <input type="radio" class="rating-input"-->
+          <!--                 id="rating-input-1-1" name="rating-input-1">-->
+          <!--          <label for="rating-input-1-1" class="rating-star"></label>-->
+          <!--      </span>-->
+          <!--</div>-->
           <div class="form-group">
             Overall Rank:<br>
             <input type="text" id="overallrank" name="overall" value=""><br>
@@ -95,7 +95,7 @@
             <div>
               <input type="button" id="submit" value="Submit">
             </div>
-        </fieldset>
+        </div>
     </form>
   </div>
   </div>
