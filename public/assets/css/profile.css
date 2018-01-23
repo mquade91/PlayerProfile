@@ -1,9 +1,21 @@
 .jumbotron {
     border-style: solid;
     border-color: #87cefa;
-    border-width: 10px;
+    border-width: .5rem;
 
 }
+
+.dropdown-menu {
+    max-width: 10px;
+}
+
+#navbar {
+    text-align: center;
+    float: none;
+    display: inline-block;
+    /*background-color: #87cefa;*/
+}
+
 
 
 #header {
@@ -17,33 +29,54 @@
 #inner-jumbotron {
     border-style: solid;
     border-color: #87cefa;
-    border-width: 10px;
+    /*border-width: px;*/
 }
 
 
 
 #playerCard {
-    border-style: solid;
-    border-color: #87cefa;
+
     text-align: center;
     background-color: white;
 }
 
 .player-attributes {
+    font-family: 'Playfair Display SC', serif;
     color: red;
     text-align: left;
+    font-size: 12px;
 }
 
-.player-values {
-    font-size: 10px;
+.player-values,
+#playerName {
+    font-size: 22px;
     font-family: lucida calligraphy;
 
 }
 
-.categories {
-    font-size: 13px;
+#playerName {
+    font-size: 30px;
 }
 
+#top5 {
+    font-family: Playfair Display SC;
+    font-size: 40px;
+    text-align: center;
+}
+
+.categories {
+    font-size: 18px;
+}
+
+#card-photo {
+    border-style: double;
+    border-color: #87cefa;
+    border-width: 5px;
+}
+
+#indicators {
+    background-color: #87cefa;
+}
 
 
 
@@ -53,7 +86,34 @@
     }
 
     .jumbotron {
-        width: 1640;
+        width: 16400px;
+        height: 30%;
+        width: 30%;
+    }
+
+    .player-attributes {
+        text-align: center;
+
+    }
+
+    #navbutton {
+        text-align: center;
+    }
+
+    .card-photo {
+        width: 33%;
+    }
+
+    .player-attributes {
+        width: 33%;
+        font-size: 8px;
+    }
+
+    .categories {
+        width: 33%;
+    }
+
+    .carousel-container {
         height: 30%;
     }
 }
