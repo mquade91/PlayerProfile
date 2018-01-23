@@ -102,13 +102,48 @@
 
 .center {
     display: grid;
-    grid-template-columns: 4fr;
+    grid-template-rows: 100px auto;
+}
+
+.centerHead {
+    text-align: center;
+}
+
+.centerBody {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    font-weight: bold;
+    text-align: center;
+    align-self: start;
+}
+
+.bodyHead h5 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+}
+
+.list {
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    padding: 0;
+}
+
+.list li {
+    padding-bottom: 10px;
 }
 
 .centerTop {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
     grid-auto-rows: minmax(100, auto);
+    text-align: center;
+    font-weight: bold;
 }
 
 .individualDetails {
