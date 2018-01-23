@@ -3,6 +3,13 @@ import React, { Component } from "react";
 import "./About.css";
 
 class About extends Component {
+    state = {
+        centerSection: 0
+    };
+    
+    pageTurn = () => {
+
+    }
 
     render() {
         return (
