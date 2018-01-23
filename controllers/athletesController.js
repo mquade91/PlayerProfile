@@ -6,7 +6,7 @@ var router = express.Router();
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var db = require("../app/models");
+
 
 // When a browser calls for the site, get the login page.
 router.get("/", function(req,res) {
@@ -32,7 +32,7 @@ router.get("/inputPage", function(req,res) {
 router.get("/athletes", function(req, res) {
   db.Athletes
     .find({}).
-    sort({"lastNAme":-1})
+    sort({"lastName":-1})
     .populate("scouter")
     .then(function(dbAthletes) {
       // If we were able to successfully find Athletes
