@@ -21,11 +21,13 @@
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "start": "concurrently 'nodemon server.js' 'npm run client'",
     "build": "node scripts/build.js"
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
     "nodemon": "^1.14.11"
+    "devDependencies": {
+      "mongojs": "^2.4.1"
+    }
   }
-}
