@@ -71,10 +71,30 @@ module.exports = function(app, passport) {
         });
     });
     
-    //get ALL PLAYERS
+    //get ALL PLAYERS PAGE
     app.get('/athletes', function(req, res) {
         res.sendFile(path.join(__dirname, "../public/profile.html"));
     });
+    
+     //get ALL PLAYERS INFO
+    app.get('/athletesInfo', function(req, res) {
+    db.Athlete
+    .find({})
+    .sort({"ranking":-1})
+    .populate("user")
+    .then(function(dbAthletes) {
+      // If we were able to successfully find Athletes
+      res.json(dbAthletes);
+      console.log(dbAthletes);
+    })
+    .catch(function(err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+});
+
+
+
 
 
 };
