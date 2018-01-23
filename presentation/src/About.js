@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 import "./About.css";
-
+import Center from "./components/pages/Center";
+import Navigator from "./components/Navigator";
 class About extends Component {
 
     render() {
@@ -30,6 +31,8 @@ class About extends Component {
                 </div>
                 <div className="center">
                     <h2>SmartScout - The Concept</h2>
+                    
+                    <Navigator/>
                 </div>
                 <div className="right">
                     <div className="rightTop">
