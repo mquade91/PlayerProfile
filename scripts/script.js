@@ -9,18 +9,24 @@ $(document).ready(function() {
             firstname: $("#firstname").val().trim(),
             lastname: $("#lastname").val().trim(),
             height: $("#height").val().trim(),
-            weight: $("weight").val().trim(),
+            // weight: $("#weight").val().trim(),
             dash: $("#dash").val().trim(),
             school: $("#school").val().trim(),
-            positionrating: $("#positionrating").val().trim(),
+            // position: $("#position").val().trim(),
+            // positionrating: $("#positionrating").val().trim(),
             overallrank: $("#overallrank").val().trim(),
             comments: $("#comments").val().trim(),
         };
 
-        console.log(newPlayer);
+        console.log("test" + newPlayer);
 
-        $.post("/newPlayer", newPlayer,
-            function(data) {
+        $.ajax({
+            url:'/newPlayer',
+            method:"POST",
+            data:newPlayer
+        })
+           .then(function(data){
+                console.log("_________________");
                 if (data) {
                     alert("New Player added to the database");
                 }
@@ -31,9 +37,10 @@ $(document).ready(function() {
                 $("#firstname").val().trim();
                 $("#lastname").val().trim();
                 $("#height").val().trim();
-                $("weight").val().trim();
+                $("#weight").val().trim();
                 $("#dash").val().trim();
                 $("#school").val().trim();
+                $("#position").val().trim(),
                 $("#positionrating").val().trim();
                 $("#overallrank").val().trim();
                 $("#comments").val().trim();
