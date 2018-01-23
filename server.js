@@ -42,6 +42,10 @@ app.use(flash()); //use connect-flash for flash messages
 //routes==============
 require('./app/routes.js')(app, passport); //load our routes
 
+// If using router
+// var athleteRoutes = require("./controllers/athletesController")
+// app.use("/", athleteRoutes)
+
 //launch=========
 app.listen(port);
 console.log("App is running on PORT: " + port);
