@@ -1,17 +1,22 @@
 import React, { Component } from "react";
 
 import "./About.css";
-
+import Present1 from "./Present1";
+import Present2 from "./Present2";
+import Present3 from "./Present3";
 class About extends Component {
     state = {
         centerSection: 0
     };
     
-    pageTurn = () => {
-
-    }
+    pageTurn = () => (
+            console.log("click1")
+            // this.setState.centerSection = 1;
+        );
 
     render() {
+        
+    
         return (
         <div className="wrapper">
             <div className="left">
@@ -20,7 +25,8 @@ class About extends Component {
                 </div>
                 <div className="individualPhotos">
                     <div className="Matt">
-                        <img className="individualPhoto" id="mattPhoto" src="../assets/images/Matt.png" alt="Matthew Quadw"/>
+                        <img className="individualPhoto" id="mattPhoto" src="../assets/images/Matt.png" alt="Matthew Quade" 
+                        onClick={this.pageTurn}/>
                         <p>General Manager<br/>Matthew Quade</p>
                     </div>
                     <div className="Eddie">
@@ -40,6 +46,7 @@ class About extends Component {
             <div className="center">
                 <div className="centerTop">
                     <h3>SmartScout</h3>
+                <Present1/>
                 </div>
             </div>
             <div className="right">
