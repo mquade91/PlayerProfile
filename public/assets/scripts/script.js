@@ -1,4 +1,5 @@
 /* global $*/
+
 $(document).ready(function() {
     console.log("scipt connected");
 
@@ -37,4 +38,6 @@ $(document).ready(function() {
         ];
         console.log(listData);
     });
+
+
 });
