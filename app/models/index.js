@@ -2,6 +2,5 @@
 
 module.exports = {
   Athlete: require("./athlete"),
-  comment: require("./comment"),
   user: require("./user")
 };
