@@ -1,6 +1,6 @@
 /* global $*/
 $(document).ready(function() {
-    console.log("scipt connected");
+    console.log("script connected");
 
     $("#submit").on("click", function(event) {
         event.preventDefault();
@@ -52,8 +52,6 @@ $(document).ready(function() {
     function getResults() {
         $.getJSON("/athletesInfo", function(data) {
             console.log(data);
-
-
 
             for (var i = 0; i < data.length; i++) {
                 $("#allPlayers").prepend("<div class='playerCard'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + "</p></div>")
