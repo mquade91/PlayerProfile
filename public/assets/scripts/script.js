@@ -32,7 +32,7 @@ $(document).ready(function() {
             else {
                 alert("Fail! Try again!");
             }
-            // Clear the form when submitting
+                      // Clear the form when submitting
             $("#firstname").val("");
             $("#lastname").val("");
             $("#height").val("");
@@ -43,8 +43,6 @@ $(document).ready(function() {
             $("#positionRating").val("");
             $("#overallRank").val("");
             $("#comments").val("");
-
-        });
-
     });
+});
 });
