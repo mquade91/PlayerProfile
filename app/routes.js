@@ -71,12 +71,12 @@ module.exports = function(app, passport) {
         });
     });
     
-    //get ALL PLAYERS PAGE
+    //get PLAYERS PAGE
     app.get('/athletes', function(req, res) {
         res.sendFile(path.join(__dirname, "../public/profile.html"));
     });
     
-     //get ALL ATHLETES INFO
+     //get ALL ATHLETES 
     app.get('/athletesInfo', function(req, res) {
     db.Athlete
     .find({})
@@ -92,11 +92,27 @@ module.exports = function(app, passport) {
       res.json(err);
     });
     
-    
-    // get ATHLETE by LASTNAME
-    app.get("/athletesInfo/:lastname", function(req, res) {
+    //GET ATHLETE by POSITION
+   app.get("/athletesInfo/position/:position", function(req, res) {
     db.Athlete
-    .find({lastName: req.params.lastname})
+    .find({position: req.params.position})
+    .populate("user")
+    .then(function(dbAthletes) {
+      // If we were able to successfully find Athletes
+      res.json(dbAthletes);
+      console.log(dbAthletes);
+    })
+    .catch(function(err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+});
+    
+    
+    // GET ATHLETE by LASTNAME
+    app.get("/athletesInfo/lastName/:lastName", function(req, res) {
+    db.Athlete
+    .find({lastName: req.params.lastName})
     
     .populate("user")
     .then(function(dbAthletes) {
@@ -109,6 +125,14 @@ module.exports = function(app, passport) {
       res.json(err);
     });
 });
+
+
+
+
+
+
+
+
 });
 
 
