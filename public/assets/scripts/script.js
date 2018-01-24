@@ -13,8 +13,8 @@ $(document).ready(function() {
             dash: $("#dash").val().trim(),
             school: $("#school").val().trim(),
             position: $("#position").val().trim(),
-            positionrating: $("#positionrating").val(),
-            overallrank: $("#overallrank").val(),
+            positionrating: $("#positionrating").val().trim(),
+            overallrank: $("#overallrank").val().trim(),
             comments: $("#comments").val().trim(),
         };
 
@@ -40,8 +40,8 @@ $(document).ready(function() {
             $("#dash").val("");
             $("#school").val("");
             $("#position").val("");
-            $("#positionrating").val("");
-            $("#overallrank").val("");
+            $("#positionRating").val("");
+            $("#overallRank").val("");
             $("#comments").val("");
 
         });
