@@ -10,8 +10,8 @@ class About extends Component {
    
     render() {
         console.log("About");
-        console.log(this.props.currentSlide);
-         switch (this.props.currentSlide) {
+        console.log(this.props.slide);
+         switch (this.props.slide) {
             case 0:
                 return (
                     <Slide0/>
@@ -29,7 +29,7 @@ class About extends Component {
                     <Slide3/>
                     );
             default: return (
-                    <Slide3/>
+                    <Slide0/>
                 );
         }
     }
