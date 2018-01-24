@@ -21,16 +21,16 @@ var AthleteSchema = new Schema({
     type: Number
   },
   school: {
-    type: String
+    type: String,
   },
   position: {
     type: String
   },
   positionRating: {
-    type: Number
+    type: Number,
   },
   overallRank: {
-    type: Number
+    type: Number,
   },
   // Store the ObjectId of a comment section
   // The ref property links the ObjectId to the Comment model

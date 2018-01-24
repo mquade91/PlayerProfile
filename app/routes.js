@@ -62,8 +62,11 @@ module.exports = function(app, passport) {
     });
 
     //ADD NEW PLAYER
-    app.post('/newPlayer', function(req, res) {
-        console.log("Body here" + req.body);
+
+    app.post('/newPlayer', function (req, res){
+        console.log("Body here");
+        console.log(req.body);
+        
 
         db.Athlete.create(req.body)
             .then(function(athlete) {
@@ -128,6 +131,41 @@ module.exports = function(app, passport) {
 
 
 
+ //get ALL ATHLETES by overallRank worst to best 
+    app.get('/athletesInfo/worstToBest', function(req, res) {
+    db.Athlete
+    .find({})
+    .sort({"overallRank":-1})
+    .populate("user")
+    .then(function(dbAthletes) {
+      // If we were able to successfully find Athletes
+      res.json(dbAthletes);
+      console.log(dbAthletes);
+    })
+    .catch(function(err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+
+});
+
+ //get ALL ATHLETES by overallRank best to worst 
+    app.get('/athletesInfo/bestToWorst', function(req, res) {
+    db.Athlete
+    .find({})
+    .sort({"overallRank":1})
+    .populate("user")
+    .then(function(dbAthletes) {
+      // If we were able to successfully find Athletes
+      res.json(dbAthletes);
+      console.log(dbAthletes);
+    })
+    .catch(function(err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+
+});
 
 
 

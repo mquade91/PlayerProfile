@@ -10,15 +10,15 @@ $(document).ready(function() {
             lastName: $("#lastname").val().trim(),
             height: $("#height").val().trim(),
             weight: $("#weight").val().trim(),
-            dash: $("#dash").val().trim(),
+            fortyTime: $("#dash").val().trim(),
             school: $("#school").val().trim(),
             position: $("#position").val().trim(),
-            // positionrating: $("#positionrating").val().trim(),
-            overallrank: $("#overallrank").val().trim(),
-            comments: $("#comments").val().trim(),
+            positionRating: $("#positionRating").val().trim(),
+            overallRank: $("#overallRank").val().trim(),
+            comment: $("#comments").val().trim(),
         };
-
-        console.log("test" + newPlayer);
+        console.log("test");
+        console.log(newPlayer);
 
         $.ajax({
             url: '/newPlayer',
@@ -32,19 +32,20 @@ $(document).ready(function() {
             else {
                 alert("Fail! Try again!");
             }
-            // Clear the form when submitting
+
+                      // Clear the form when submitting
+
             $("#firstname").val("");
             $("#lastname").val("");
             $("#height").val("");
             $("#weight").val("");
             $("#dash").val("");
             $("#school").val("");
-            $("#position").val(""),
-                $("#positionrating").val("");
-            $("#overallrank").val("");
-            $("#comments").val("");
 
-        });
+            $("#position").val("");
+            $("#positionRating").val("");
+            $("#overallRank").val("");
+            $("#comments").val("");
 
     });
 
@@ -63,4 +64,5 @@ $(document).ready(function() {
 
 
 
+});
 });
