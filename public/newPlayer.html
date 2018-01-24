@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/newPlayer.css" type="text/css" />
-    <script src="./assets/scripts/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/script.js"></script>
   </head>
   <body>
-    <div class="container">
+    
       <form>
           <h1>Athlete information:</h1>
           <div class="form-group">
@@ -53,11 +53,11 @@
           </div>
           <div class="form-group">
             Athletes' Position Rating:<br>
-              <input type="text" id="positionrating" name="position" value=""><br>
+              <input type="number" id="positionrating" name="position" value=""><br>
           </div>
           <div class="form-group">
             Overall Rank:<br>
-            <input type="text" id="overallrank" name="overall" value=""><br>
+            <input type="number" id="overallrank" name="overall" value=""><br>
           </div>
           <div class="form-group">
                 <label for="exampleTextarea">Addtional comments</label>
@@ -67,6 +67,6 @@
               <button type="submit" id="submit" class="btn btn-primary">Submit</button>
           </div>
     </form>
-  </div>
+  
 </body>
 </html>
