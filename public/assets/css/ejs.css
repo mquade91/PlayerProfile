@@ -4,8 +4,23 @@ body {
 
 .well {
     background-color: lightGrey;
+
 }
 
 h1 {
     font-family: Playfair Display SC;
+}
+
+#scouts {
+    /*color: red;*/
+}
+
+@media (min-width: 375) {
+    #scouts {
+        width: 350px;
+    }
+
+    .well {
+        width: 33%;
+    }
 }
