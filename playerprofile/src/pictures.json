@@ -1,0 +1,34 @@
+[
+    {
+    "className": "Matt",
+    "id": "mattPhoto",
+    "src": "../assets/images/Matt.png",
+    "alt": "Matthew Quade",
+    "p1": "General Manager",
+    "p2": "Matthew Quade"
+},
+{
+    "className": "Eddie",
+    "id": "eddiePhoto",
+    "src": "../assets/images/Eddie.png",
+    "alt": "Eddie Pedersen",
+    "p1": "Information Technology",
+    "p2": "Eddie Pedersen"
+},
+{
+    "className": "Michael",
+    "id": "michaelPhoto",
+    "src": "../assets/images/Michael.png",
+    "alt": "Michael Sloan",
+    "p1": "Client Accounts",
+    "p2": "Michael Sloan"
+},
+{
+    "className": "Chas",
+    "id": chasPhoto,
+    "src": "../assets/images/Chas.jpg",
+    "alt": "Chas Campbell",
+    "p1": "Marketing and Sales",
+    "p2": "Chas Campbell"
+}
+]
