@@ -21,30 +21,30 @@ $(document).ready(function() {
         console.log("test" + newPlayer);
 
         $.ajax({
-            url: '/newPlayer',
-            method: "POST",
-            data: newPlayer
-        }).then(function(data) {
-            console.log(data);
-            if (data) {
-                alert("New Player added to the database");
-            }
-            else {
-                alert("Fail! Try again!");
-            }
-            // Clear the form when submitting
-            $("#firstname").val("");
-            $("#lastname").val("");
-            $("#height").val("");
-            $("#weight").val("");
-            $("#dash").val("");
-            $("#school").val("");
-            $("#position").val("");
-            $("#positionrating").val("");
-            $("#overallrank").val("");
-            $("#comments").val("");
+            url:'/newPlayer',
+            method:"POST",
+            data:newPlayer
+        }).then(function(data){
+                console.log(data);
+                if (data) {
+                    alert("New Player added to the database");
+                }
+                else {
+                    alert("Fail! Try again!");
+                }
+                // Clear the form when submitting
+                $("#firstname").val("");
+                $("#lastname").val("");
+                $("#height").val("");
+                $("#weight").val("");
+                $("#dash").val("");
+                $("#school").val("");
+                $("#position").val(""),
+                $("#positionrating").val("");
+                $("#overallrank").val("");
+                $("#comments").val("");
 
-        });
+            });
 
     });
 });
