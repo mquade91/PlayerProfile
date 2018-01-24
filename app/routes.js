@@ -60,27 +60,82 @@ module.exports = function(app, passport) {
     app.get('/newPlayer', function(req, res) {
         res.sendFile(path.join(__dirname, "../public/newPlayer.html"));
     });
-    
+
     //ADD NEW PLAYER
+
     app.post('/newPlayer', function (req, res){
-        console.log("Body here" + req.body);
+        console.log("Body here");
+        console.log(req.body);
         
+
         db.Athlete.create(req.body)
-        .then(function(athlete) {
-            console.log("post create" + athlete);
-        });
+            .then(function(athlete) {
+                console.log("post create" + athlete);
+            });
     });
-    
-    //get ALL PLAYERS PAGE
+
+    //get PLAYERS PAGE
     app.get('/athletes', function(req, res) {
         res.sendFile(path.join(__dirname, "../public/profile.html"));
     });
-    
-     //get ALL ATHLETES INFO
+
+    //get ALL ATHLETES 
     app.get('/athletesInfo', function(req, res) {
+        db.Athlete
+            .find({})
+            .sort({ "lastName": -1 })
+            .populate("user")
+            .then(function(dbAthletes) {
+                // If we were able to successfully find Athletes
+                res.json(dbAthletes);
+                console.log(dbAthletes);
+            })
+            .catch(function(err) {
+                // If an error occurred, send it to the client
+                res.json(err);
+            });
+
+        //GET ATHLETE by POSITION
+        app.get("/athletesInfo/position/:position", function(req, res) {
+            db.Athlete
+                .find({ position: req.params.position })
+                .populate("user")
+                .then(function(dbAthletes) {
+                    // If we were able to successfully find Athletes
+                    res.json(dbAthletes);
+                    console.log(dbAthletes);
+                })
+                .catch(function(err) {
+                    // If an error occurred, send it to the client
+                    res.json(err);
+                });
+        });
+
+
+        // GET ATHLETE by LASTNAME
+        app.get("/athletesInfo/lastName/:lastName", function(req, res) {
+            db.Athlete
+                .find({ lastName: req.params.lastName })
+
+                .populate("user")
+                .then(function(dbAthletes) {
+                    // If we were able to successfully find Athletes
+                    res.json(dbAthletes);
+                    console.log(dbAthletes);
+                })
+                .catch(function(err) {
+                    // If an error occurred, send it to the client
+                    res.json(err);
+                });
+        });
+
+
+
+ //get ALL ATHLETES by overallRank worst to best 
+    app.get('/athletesInfo/worstToBest', function(req, res) {
     db.Athlete
     .find({})
-    .sort({"lastName":-1})
+    .sort({"overallRank":-1})
     .populate("user")
     .then(function(dbAthletes) {
       // If we were able to successfully find Athletes
@@ -91,13 +146,14 @@ module.exports = function(app, passport) {
       // If an error occurred, send it to the client
       res.json(err);
     });
-    
-    
-    // get ATHLETE by LASTNAME
-    app.get("/athletesInfo/:lastname", function(req, res) {
+
+});
+
+ //get ALL ATHLETES by overallRank best to worst 
+    app.get('/athletesInfo/bestToWorst', function(req, res) {
     db.Athlete
-    .find({lastName: req.params.lastname})
-    
+    .find({})
+    .sort({"overallRank":1})
     .populate("user")
     .then(function(dbAthletes) {
       // If we were able to successfully find Athletes
@@ -108,8 +164,14 @@ module.exports = function(app, passport) {
       // If an error occurred, send it to the client
       res.json(err);
     });
+
 });
-});
+
+
+
+
+
+    });
 
 
 };
