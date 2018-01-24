@@ -21,30 +21,46 @@ $(document).ready(function() {
         console.log("test" + newPlayer);
 
         $.ajax({
-            url:'/newPlayer',
-            method:"POST",
-            data:newPlayer
-        }).then(function(data){
-                console.log(data);
-                if (data) {
-                    alert("New Player added to the database");
-                }
-                else {
-                    alert("Fail! Try again!");
-                }
-                // Clear the form when submitting
-                $("#firstname").val("");
-                $("#lastname").val("");
-                $("#height").val("");
-                $("#weight").val("");
-                $("#dash").val("");
-                $("#school").val("");
-                $("#position").val(""),
+            url: '/newPlayer',
+            method: "POST",
+            data: newPlayer
+        }).then(function(data) {
+            console.log(data);
+            if (data) {
+                alert("New Player added to the database");
+            }
+            else {
+                alert("Fail! Try again!");
+            }
+            // Clear the form when submitting
+            $("#firstname").val("");
+            $("#lastname").val("");
+            $("#height").val("");
+            $("#weight").val("");
+            $("#dash").val("");
+            $("#school").val("");
+            $("#position").val(""),
                 $("#positionrating").val("");
-                $("#overallrank").val("");
-                $("#comments").val("");
+            $("#overallrank").val("");
+            $("#comments").val("");
 
-            });
+        });
 
     });
+
+    function getResults() {
+        $.getJSON("/athletesInfo", function(data) {
+            console.log(data);
+
+
+
+            for (var i = 0; i < data.length; i++) {
+                $("#allPlayers").prepend("<div class='playerCard'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + "</p></div>")
+            }
+        })
+    }
+    getResults()
+
+
+
 });
