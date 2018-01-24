@@ -60,80 +60,80 @@ module.exports = function(app, passport) {
     app.get('/newPlayer', function(req, res) {
         res.sendFile(path.join(__dirname, "../public/newPlayer.html"));
     });
-    
+
     //ADD NEW PLAYER
-    app.post('/newPlayer', function (req, res){
+    app.post('/newPlayer', function(req, res) {
         console.log("Body here" + req.body);
-        
+
         db.Athlete.create(req.body)
-        .then(function(athlete) {
-            console.log("post create" + athlete);
-        });
+            .then(function(athlete) {
+                console.log("post create" + athlete);
+            });
     });
-    
+
     //get PLAYERS PAGE
     app.get('/athletes', function(req, res) {
         res.sendFile(path.join(__dirname, "../public/profile.html"));
     });
-    
-     //get ALL ATHLETES 
+
+    //get ALL ATHLETES 
     app.get('/athletesInfo', function(req, res) {
-    db.Athlete
-    .find({})
-    .sort({"lastName":-1})
-    .populate("user")
-    .then(function(dbAthletes) {
-      // If we were able to successfully find Athletes
-      res.json(dbAthletes);
-      console.log(dbAthletes);
-    })
-    .catch(function(err) {
-      // If an error occurred, send it to the client
-      res.json(err);
+        db.Athlete
+            .find({})
+            .sort({ "lastName": -1 })
+            .populate("user")
+            .then(function(dbAthletes) {
+                // If we were able to successfully find Athletes
+                res.json(dbAthletes);
+                console.log(dbAthletes);
+            })
+            .catch(function(err) {
+                // If an error occurred, send it to the client
+                res.json(err);
+            });
+
+        //GET ATHLETE by POSITION
+        app.get("/athletesInfo/position/:position", function(req, res) {
+            db.Athlete
+                .find({ position: req.params.position })
+                .populate("user")
+                .then(function(dbAthletes) {
+                    // If we were able to successfully find Athletes
+                    res.json(dbAthletes);
+                    console.log(dbAthletes);
+                })
+                .catch(function(err) {
+                    // If an error occurred, send it to the client
+                    res.json(err);
+                });
+        });
+
+
+        // GET ATHLETE by LASTNAME
+        app.get("/athletesInfo/lastName/:lastName", function(req, res) {
+            db.Athlete
+                .find({ lastName: req.params.lastName })
+
+                .populate("user")
+                .then(function(dbAthletes) {
+                    // If we were able to successfully find Athletes
+                    res.json(dbAthletes);
+                    console.log(dbAthletes);
+                })
+                .catch(function(err) {
+                    // If an error occurred, send it to the client
+                    res.json(err);
+                });
+        });
+
+
+
+
+
+
+
+
     });
-    
-    //GET ATHLETE by POSITION
-   app.get("/athletesInfo/position/:position", function(req, res) {
-    db.Athlete
-    .find({position: req.params.position})
-    .populate("user")
-    .then(function(dbAthletes) {
-      // If we were able to successfully find Athletes
-      res.json(dbAthletes);
-      console.log(dbAthletes);
-    })
-    .catch(function(err) {
-      // If an error occurred, send it to the client
-      res.json(err);
-    });
-});
-    
-    
-    // GET ATHLETE by LASTNAME
-    app.get("/athletesInfo/lastName/:lastName", function(req, res) {
-    db.Athlete
-    .find({lastName: req.params.lastName})
-    
-    .populate("user")
-    .then(function(dbAthletes) {
-      // If we were able to successfully find Athletes
-      res.json(dbAthletes);
-      console.log(dbAthletes);
-    })
-    .catch(function(err) {
-      // If an error occurred, send it to the client
-      res.json(err);
-    });
-});
-
-
-
-
-
-
-
-
-});
 
 
 };
