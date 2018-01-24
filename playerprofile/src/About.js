@@ -1,80 +1,53 @@
 import React, { Component } from "react";
 
 import "./About.css";
+import Present0 from "./Present0";
 import Present1 from "./Present1";
 import Present2 from "./Present2";
 import Present3 from "./Present3";
+
 class About extends Component {
     state = {
         centerSection: 0
     };
-    
-    pageTurn = () => (
-            console.log("click1")
-            // this.setState.centerSection = 1;
-        );
+      
+    mattPage = () => {
+            console.log("Matt")
+            this.setState.centerSection = 1;
+        };
+    eddiePage = () => {
+            console.log("Eddie")
+            this.setState.centerSection = 2;
+        };
+    michaelPage = () => {
+            console.log("Michael")
+            this.setState.centerSection = 3;
+        };
 
     render() {
-        
-    
+        if(this.state.centerSection === 1) {
         return (
-        <div className="wrapper">
-            <div className="left">
-                <div className="leftTop">
-                    <h5>Our Leadership</h5>
-                </div>
-                <div className="individualPhotos">
-                    <div className="Matt">
-                        <img className="individualPhoto" id="mattPhoto" src="../assets/images/Matt.png" alt="Matthew Quade" 
-                        onClick={this.pageTurn}/>
-                        <p>General Manager<br/>Matthew Quade</p>
-                    </div>
-                    <div className="Eddie">
-                        <img className="individualPhoto" id="eddiePhoto" src="../assets/images/Eddie.png" alt="Eddie Pedersen"/>
-                        <p>Information Technology<br/>EddiePedersen</p>
-                    </div>
-                    <div className="Michael">
-                        <img className="individualPhoto" id="michaelPhoto" src="../assets/images/Michael.png" alt="Michael Sloan"/>
-                        <p>Client Accounts<br/>Michael Sloan</p>
-                    </div>
-                    <div className="Chas">
-                        <img className="individualPhoto" id="chasPhoto" src="../assets/images/Chas.jpg" alt="Chas Campbell"/>
-                        <p>Marketing and Sales<br/>Chas Campbell</p>
-                    </div>
-                </div>
-            </div>
-            <div className="center">
-                <div className="centerTop">
-                    <h3>SmartScout</h3>
-                <Present1/>
-                </div>
-            </div>
-            <div className="right">
-                <div className="rightTop">
-                    <h5>Our Offices</h5>
-                </div>
-                <div className="officePhoto">
-                    <img id="officePicture" src="../assets/images/uncc-smaller.png" alt="SmartScout Office Building"/>
-                </div>
-                <div className="officeInfo">
-                <br></br>
-                    <p>
-                        320 E 9th St
-                        Charlotte, NC 28202<br/>
-                        At the corner of 9th and Brevard
-                        Beside First Ward Park.<br/>
-                        Main Switchboard<br/>
-                        (704) 687-8902<br/>
-                        email: info@smartscout.com
-                    </p>
-                </div>
-            </div>
-            <div className="rightSpacer">
-                
-            </div>
-        </div>
-        // End of wrapper
-    );
-}
+        <Present1/>
+        );
+        } else {
+            if(this.state.centerSection === 2) {
+            return (
+            <Present2/>
+            );
+            } else {
+                if(this.state.centerSection === 3) {
+                    return (
+                    <Present3/>
+                    );
+                } else {
+                    return (
+                        
+                        <Present0/>
+                        );
+                    }
+                }
+            }   
+        }
+    
 }
 export default About;
