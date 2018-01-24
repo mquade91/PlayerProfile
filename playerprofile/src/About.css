@@ -105,6 +105,10 @@
     grid-template-rows: 100px auto;
 }
 
+.centerTop h3 {
+    font-weight: bold;
+}
+
 .centerHead {
     text-align: center;
 }
@@ -122,8 +126,15 @@
     padding-bottom: 20px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+}
+
+.bodyHead0 h4 {
+    padding-top: 30px;
+    padding-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
     font-size: 22px;
+    margin-top: 100px;
 }
 
 .list {
