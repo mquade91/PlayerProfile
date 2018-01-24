@@ -19,3 +19,34 @@ body {
   border: 1px solid #ccc; /* THIS */
   border-radius: 4px; /* THIS */
 }
+.footer {
+    bottom: 0;
+    background-color: #4d85ff;
+    color: white;
+    text-align: center;
+    display: block;
+}
+
+.foot {
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px 20px 0px 20px;
+    position: relative;
+}
+
+.alink:link {
+    color: white;
+}
+
+.alink:hover {
+    color: #ccffff;
+}
+
+.alink:visited {
+    color: #e6ccff;
+}
+
+.icons {
+    width: 30px;
+    margin-top: 5px;
+}
