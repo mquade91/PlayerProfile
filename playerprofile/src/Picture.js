@@ -5,7 +5,8 @@ import React from "react";
 
  const Picture = (props) => (
     <div className={props.className}>
-        <img className="individualPhoto" id={props.id} src={props.src} alt={props.alt} onClick={() => {props.handleClick(props.id)}}/>
+        <img className="individualPhoto" id={props.id} src={props.src} alt={props.alt} onClick={() => {
+        props.handlePhotoClick(props.id)}}/>
         <p>{props.p1}</p><br/><p>{props.p2}</p>
     </div>
                 
