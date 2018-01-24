@@ -32,17 +32,37 @@ $(document).ready(function() {
             else {
                 alert("Fail! Try again!");
             }
+
                       // Clear the form when submitting
+
             $("#firstname").val("");
             $("#lastname").val("");
             $("#height").val("");
             $("#weight").val("");
             $("#dash").val("");
             $("#school").val("");
+
             $("#position").val("");
             $("#positionRating").val("");
             $("#overallRank").val("");
             $("#comments").val("");
+
     });
+
+    function getResults() {
+        $.getJSON("/athletesInfo", function(data) {
+            console.log(data);
+
+
+
+            for (var i = 0; i < data.length; i++) {
+                $("#allPlayers").prepend("<div class='playerCard'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + "</p></div>")
+            }
+        })
+    }
+    getResults()
+
+
+
 });
 });
