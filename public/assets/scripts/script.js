@@ -13,8 +13,8 @@ $(document).ready(function() {
             dash: $("#dash").val().trim(),
             school: $("#school").val().trim(),
             position: $("#position").val().trim(),
-            // positionrating: $("#positionrating").val().trim(),
-            overallrank: $("#overallrank").val().trim(),
+            positionrating: $("#positionrating").val(),
+            overallrank: $("#overallrank").val(),
             comments: $("#comments").val().trim(),
         };
 
