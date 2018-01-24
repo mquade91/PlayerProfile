@@ -33,7 +33,7 @@ class App extends Component {
             <div className="wrapper">
                 <div className="left">
                     <div className="leftTop">
-                        <h5>Our Leadership</h5>
+                        <h4>Our Leadership</h4>
                     </div>
                     <div className="individualPhotos">
                         <Panel handlePhotoClick = {this.handlePanelClick}/>
@@ -41,13 +41,13 @@ class App extends Component {
                 </div>
                 <div className="center">
                     <div className="centerTop">
-                        <h3>SmartScout</h3>
+                        <h2>SmartScout</h2>
                     <About slide = {this.state.currentSlide}/>
                     </div>
                 </div>
                 <div className="right">
                     <div className="rightTop">
-                        <h5>Our Offices</h5>
+                        <h4>Our Offices</h4>
                     </div>
                     <div className="officePhoto">
                         <img id="officePicture" src="../assets/images/uncc-smaller.png" alt="SmartScout Office Building"/>
