@@ -1,53 +1,37 @@
 import React, { Component } from "react";
 
 import "./About.css";
-import Present0 from "./Present0";
-import Present1 from "./Present1";
-import Present2 from "./Present2";
-import Present3 from "./Present3";
+import Slide0 from "./Slide0";
+import Slide1 from "./Slide1";
+import Slide2 from "./Slide2";
+import Slide3 from "./Slide3";
 
 class About extends Component {
-    state = {
-        centerSection: 0
-    };
-      
-    mattPage = () => {
-            console.log("Matt")
-            this.setState.centerSection = 1;
-        };
-    eddiePage = () => {
-            console.log("Eddie")
-            this.setState.centerSection = 2;
-        };
-    michaelPage = () => {
-            console.log("Michael")
-            this.setState.centerSection = 3;
-        };
-
+   
     render() {
-        if(this.state.centerSection === 1) {
-        return (
-        <Present1/>
-        );
-        } else {
-            if(this.state.centerSection === 2) {
-            return (
-            <Present2/>
-            );
-            } else {
-                if(this.state.centerSection === 3) {
-                    return (
-                    <Present3/>
+        console.log("About");
+        console.log(this.props.currentSlide);
+         switch (this.props.currentSlide) {
+            case 0:
+                return (
+                    <Slide0/>
                     );
-                } else {
-                    return (
-                        
-                        <Present0/>
-                        );
-                    }
-                }
-            }   
+            case 1:
+                return (
+                <Slide1/>
+                );
+            case 2:
+                return (
+                    <Slide2/>
+                    );
+            case 3:
+                return (
+                    <Slide3/>
+                    );
+            default: return (
+                    <Slide3/>
+                );
         }
-    
+    }
 }
 export default About;
