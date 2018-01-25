@@ -18,10 +18,10 @@ var UserSchema = Schema({
     areaCovered: String,
   },
   
-  ahtletes:{
+  athletes:[{
     type: Schema.Types.ObjectId,
     ref: 'Athlete'
-  }
+  }]
 });
 
 // METHODS
