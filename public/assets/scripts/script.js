@@ -33,7 +33,7 @@ $(document).ready(function() {
                 alert("Fail! Try again!");
             }
 
-                      // Clear the form when submitting
+            // Clear the form when submitting
 
             $("#firstname").val("");
             $("#lastname").val("");
@@ -47,20 +47,24 @@ $(document).ready(function() {
             $("#overallRank").val("");
             $("#comments").val("");
 
+        });
+
+
+
+
     });
 
     function getResults() {
         $.getJSON("/athletesInfo", function(data) {
             console.log(data);
 
+
+
             for (var i = 0; i < data.length; i++) {
-                $("#allPlayers").prepend("<div class='playerCard'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + "</p></div>")
+                $("#allPlayers").prepend("<div  class='col-md-3'><div class='playerCard'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + " ft" + "</p><p>" + "Weight: " + data[i].weight + " lbs" + "</p><p>" + "Dash: " + data[i].fortyTime + " s" + "</p><p>" + data[i].school + "</p><p>" + "" + data[i].position + "" + "</p><p>" + data[i].comment + "</p></div></div>")
             }
         })
     }
     getResults()
 
-
-
-});
 });
