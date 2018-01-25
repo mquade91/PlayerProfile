@@ -41,7 +41,7 @@ var AthleteSchema =  Schema({
   // This allows us to populate the Athlete with an associated Scouter
   user: {
     type: Schema.Types.ObjectId,
-    ref: "User"
+    ref: 'User'
   }
 });
 
