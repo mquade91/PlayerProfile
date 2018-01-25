@@ -1,6 +1,6 @@
 import React from "react";
 
- const Present0 = () => (
+ const Slide0 = () => (
     <div className="bodyIn">
         <div className="bodyHead0">
             <h4>Organized Data Provides Information</h4>
@@ -14,4 +14,4 @@ import React from "react";
                 
  );
 
-export default Present0;
+export default Slide0;
