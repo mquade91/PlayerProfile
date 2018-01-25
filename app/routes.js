@@ -70,12 +70,12 @@ module.exports = function(app, passport) {
     });
 
 //POST to ADD NEW PLAYER
-    app.post('/newPlayer', function (req, res){
+    app.post('/newPlayer', isLoggedIn, function (req, res){
         db.Athlete.create(req.body)
             .then(function(dbAthletes) {
                 console.log("post create");
-                 console.log(dbAthletes);
-                return db.User.findOneAndUpdate({}, { $push: { athletes: dbAthletes._id } }, { new: true });
+                console.log(dbAthletes);
+                return db.User.findOneAndUpdate({_id:req.user._id}, { $push: { athletes: dbAthletes._id } }, { new: true });
             });
     });
 
