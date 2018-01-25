@@ -8,8 +8,6 @@ class App extends Component {
     }
     
     handlePanelClick = (id) => {
-        console.log("App");
-        console.log(id);
         switch (id) {
             case "mattPhoto":
                 this.setState({currentSlide: 1});
@@ -26,7 +24,6 @@ class App extends Component {
             default: this.setState({centerSection: 0});
             console.log("Bad id");
         }
-        console.log(this.state.currentSlide);
     }
      render() {
          return (
