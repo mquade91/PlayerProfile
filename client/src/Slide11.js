@@ -1,31 +1,29 @@
 import React from "react";
 
- const Present2 = () => (
+ const Slide11 = () => (
     <div className="bodyIn">
         <div className="bodyHead">
-            <h5>Technlogies Used</h5>
+            <h5>Security is Paramount</h5>
         </div>
             <div className="bodyList">
                 <ul className="list">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>Bootstrappin</li>
-                    <li>MongoDB</li>
-                    <li>Mongoose</li>
-                    <li>REACT</li>
+                    <li>No Signup</li>
+                    <li>Staff Controlled</li>
+                    <li>Limited Access to Entry</li>
                 </ul>
             </div>
             <div className="bodyHead">
-                <h5>New Technologies</h5>
+                <h5>Future Development</h5>
             </div>
             <div className="bodyList">
                 <ul className="list">
-                    <li>Password</li>
-                    <li>CSS Grids</li>
+                    <li>Other Sports</li>
+                    <li>Colleges</li>
+                    <li>Other Fields</li>
                 </ul>
             </div>
     </div>
                 
  );
 
-export default Present2;
+export default Slide11;
