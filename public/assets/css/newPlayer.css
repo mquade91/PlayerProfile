@@ -1,32 +1,36 @@
 body {
     background-color: #87CEFA;
     font-family: 'Montserrat', sans-serif;
-    display: block;
+    height: 100%; 
 }
-.form {
+h1, h2 {
     text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+#comments {
+    height: auto;
 }
 .form-control{
   display: block;
-  width: 100%; /* THIS */
+  width: 100%; 
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555; /* THIS */
   background-color: #fff;
-  background-image: none;
   border: 1px solid #ccc; /* THIS */
   border-radius: 4px; /* THIS */
 }
 .footer {
-    bottom: 0;
+    bottom: -110px;
     background-color: #4d85ff;
     color: white;
     text-align: center;
     display: block;
+    position: relative;
 }
-
 .foot {
     display: inline-block;
     font-size: 14px;
