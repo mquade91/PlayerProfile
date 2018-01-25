@@ -1,0 +1,16 @@
+body {
+    background-color: #87CEFA;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.card {
+    width: 50%;
+    border-bottom-width: 5px;
+    border-color: black;
+    font-weight: bold;
+}
