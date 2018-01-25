@@ -2,5 +2,5 @@
 
 module.exports = {
   Athlete: require("./athlete"),
-  user: require("./user")
+  User: require("./user")
 };
