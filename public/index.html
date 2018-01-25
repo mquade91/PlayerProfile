@@ -14,12 +14,14 @@
   </head>
 
   <body>
-
+<div class="container">
+    <div class="col-md-12" id="header">
+      <span>
+        <h1>SmartScout <a href="/profile"><img id="panthers" src="./assets/images/logo.png" width="100px"></a></h1>
+      </span>
     <div class="jumbotron">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="navbar">
-          <a class="navbar-brand" href="/">SmartScout</a>
-          <img src="./assets/images/logo.png" width="120" alt="Bootstrappin">
+
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -56,11 +58,9 @@
                   </li>
             </ul>
           </div>
-        </div>
       </nav>
+      </div>
     </div>
-    <div class="container">
-
       <div class="login-wrapper">
         <h1><span class="fa fa-sign-in"></span>Login</h1>
         <form action="/login" method="post">
@@ -75,14 +75,12 @@
           <button type="submit" class="btn btn-warning btn-lg">Login</button>
         </form>
         <hr>
-        <p>Need to an account?<a href="/signup">Sign Up</a></p>
-        <p> Or Go <a href="/">Home</a>.</p>
+        <p>Need to an account?<a href="/signup"> Sign Up</a></p>
+        <!--<p> Or Go <a href="/">Home</a>.</p>-->
       </div>
-
-    </div>
-    <div class="row">
+      
+     <div class="footer">
       <div class="col-md-12">
-        <div class="footer">
           <div class="foot">
             <a id="bit" class="alink" href="aboutSmart.html">About ScoutSmart</a>
           </div>
@@ -104,8 +102,8 @@
         </div>
       </div>
     </div>
-    </div>
   </body>
+  
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
