@@ -3,9 +3,10 @@ var mongoose = require("mongoose");
 //require bcrypt
 var bcrypt = require('bcrypt-nodejs');
 
-// Create a new ScouterSchema object
-//in passport expample ScouterSchema = mongoose.Schema({...})
-var userSchema = mongoose.Schema({
+var Schema = mongoose.Schema;
+
+// Create a new userSchema object
+var UserSchema = Schema({
 
   local: {
     email: String,
@@ -15,26 +16,27 @@ var userSchema = mongoose.Schema({
     firstName: String,
     lastName: String,
     areaCovered: String,
+  },
+  
+  ahtletes:{
+    type: Schema.Types.ObjectId,
+    ref: 'Athlete'
   }
-
 });
 
 // METHODS
 //generating a hash
-userSchema.methods.generateHash = function(password) {
+UserSchema.methods.generateHash = function(password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
 
 //checking if the PASSWORD is valid
-userSchema.methods.validPassword = function(password) {
+UserSchema.methods.validPassword = function(password) {
   return bcrypt.compareSync(password, this.local.password);
 };
 
 // //CREATE the model for users and expose it to our App
 
-var User = mongoose.model('User', userSchema);
+var User = mongoose.model('User', UserSchema);
 module.exports = User;
 
-// var Scouter = mongoose.model("Scouter", ScouterSchema);
-// // Export the Comment model
-// module.exports = Scouter;

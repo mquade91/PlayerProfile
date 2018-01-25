@@ -1,45 +1,50 @@
 import React, { Component } from "react";
 
 import About from "./About";
-
+import Panel from "./Panel";
 class App extends Component {
+    state = {
+        currentSlide: 0
+    }
+    
+    handlePanelClick = (id) => {
+        switch (id) {
+            case "mattPhoto":
+                this.setState({currentSlide: 1});
+                    break;
+            case "eddiePhoto":
+                this.setState({currentSlide: 2});
+                break;
+            case "michaelPhoto":
+                this.setState({currentSlide: 3});
+                break;    
+            case "chasPhoto":
+                this.setState({currentSlide: 0});
+                break;
+            default: this.setState({centerSection: 0});
+            console.log("Bad id");
+        }
+    }
      render() {
          return (
             <div className="wrapper">
                 <div className="left">
                     <div className="leftTop">
-                        <h5>Our Leadership</h5>
+                        <h4>Our Leadership</h4>
                     </div>
                     <div className="individualPhotos">
-                        <div className="Matt">
-                            <img className="individualPhoto" id="mattPhoto" src="../assets/images/Matt.png" alt="Matthew Quade" 
-                            onClick={mattPage}/>
-                            <p>General Manager<br/>Matthew Quade</p>
-                        </div>
-                        <div className="Eddie">
-                            <img className="individualPhoto" id="eddiePhoto" src="../assets/images/Eddie.png" alt="Eddie Pedersen"/>
-                            <p>Information Technology<br/>EddiePedersen</p>
-                        </div>
-                        <div className="Michael">
-                            <img className="individualPhoto" id="michaelPhoto" src="../assets/images/Michael.png" alt="Michael Sloan"/>
-                            <p>Client Accounts<br/>Michael Sloan</p>
-                        </div>
-                        <div className="Chas">
-                            <img className="individualPhoto" id="chasPhoto" src="../assets/images/Chas.jpg" alt="Chas Campbell"/>
-                            <p>Marketing and Sales<br/>Chas Campbell</p>
-                        </div>
+                        <Panel handlePhotoClick = {this.handlePanelClick}/>
                     </div>
                 </div>
                 <div className="center">
                     <div className="centerTop">
-                        <h3>SmartScout</h3>
-                    <About/>
-                        
+                        <h2>SmartScout</h2>
+                    <About slide = {this.state.currentSlide}/>
                     </div>
                 </div>
                 <div className="right">
                     <div className="rightTop">
-                        <h5>Our Offices</h5>
+                        <h4>Our Offices</h4>
                     </div>
                     <div className="officePhoto">
                         <img id="officePicture" src="../assets/images/uncc-smaller.png" alt="SmartScout Office Building"/>
