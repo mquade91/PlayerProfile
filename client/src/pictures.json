@@ -25,7 +25,7 @@
 },
 {
     "className": "Chas",
-    "id": chasPhoto,
+    "id": "chasPhoto",
     "src": "../assets/images/Chas.jpg",
     "alt": "Chas Campbell",
     "p1": "Marketing and Sales",

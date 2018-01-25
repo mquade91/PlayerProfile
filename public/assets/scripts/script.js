@@ -1,6 +1,6 @@
 /* global $*/
 $(document).ready(function() {
-    console.log("scipt connected");
+    console.log("script connected");
 
     $("#submit").on("click", function(event) {
         event.preventDefault();

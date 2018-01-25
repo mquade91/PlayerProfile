@@ -6,7 +6,10 @@ body {
     background-image: url("./public/assets/images/background.jpg");
     font-family: 'Montserrat', sans-serif;
 }
-
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
 .login-wrapper {
     display: block;
     width: 400px;
@@ -24,30 +27,25 @@ body {
     padding: 0;
     background-color: #87CEFA;
 }
-
-.navbar {
-    background-color: #87CEFA;
-    border-color: #87CEFA;
-}
-
 .login {
     text-align: center;
 
 }
 
 .footer {
-    bottom: 0;
+    bottom: -300px;
     background-color: #4d85ff;
     color: white;
     text-align: center;
     display: block;
+    position: relative;
 }
 
 .foot {
     display: inline-block;
     font-size: 14px;
     margin: 10px 20px 0px 20px;
-    position: relative;
+    text-align: center;
 }
 
 .alink:link {
