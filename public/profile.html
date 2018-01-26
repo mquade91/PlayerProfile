@@ -16,9 +16,13 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
+    <!--Font Awesome Icons Script Tag -->
+    <script src="https://use.fontawesome.com/893332a39a.js"></script>
+
     <!--Materialize CDN-->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">-->
 
     <!-- Viewport -->
 
@@ -63,27 +67,46 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="#">Show My Players</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Players By Position <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">QB</a></li>
-                                        <li><a href="#">RB</a></li>
-                                        <li><a href="#">WR</a></li>
-                                        <li><a href="#">FB</a></li>
-                                        <li><a href="#">TE</a></li>
-                                        <li><a href="#">OL</a></li>
-                                        <li><a href="#">DB</a></li>
-                                        <li><a href="#">FS</a></li>
-                                        <li><a href="#">SS</a></li>
-                                        <li><a href="#">DL</a></li>
-                                        <li><a href="#">K</a></li>
-                                        <li><a href="#">P</a></li>
-                                        <li role="separator" class="divider"></li>
+                                <!--<li class="dropdown">-->
+                                <!--    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Players By Position <span class="caret"></span></a>-->
+                                <!--    <ul class="dropdown-menu">-->
+                                <!--        <li><a href="/athletesInfo/position/QB">QB</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/RB">RB</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/WR">WR</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/FB">FB</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/TE">TE</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/OL">OL</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/DB">DB</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/FS">FS</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/SS">SS</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/DL">DL</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/K">K</a></li>-->
+                                <!--        <li><a href="/athletesInfo/position/P">P</a></li>-->
+                                <!--        <li role="separator" class="divider"></li>-->
 
-                                    </ul>
-                                </li>
+                                <!--    </ul>-->
+                                <!--</li>-->
+                                <select name="position" id="positionSelect">
+                                    <option selected="selected" disabled="disabled" value="none">Players By Position</option>
+                                    <option value="QB">QB</option>
+                                    <option value="RB">RB</option>
+                                    <option value="FB">FB</option>
+                                    <option value="WR">WR</option>
+                                    <option value="TE">TE</option>
+                                    <option value="OL">OL</option>
+                                    <option value="DL">DL</option>
+                                    <option value="LB">LB</option>
+                                    <option value="DB">DB</option>
+                                    <option value="FS">FS</option>
+                                    <option value="SS">SS</option>
+                                    <option value="K">K</option>
+                                    <option value="P">P</option>
+                                </select>
+                                <!--style="width:75px;height:50px-->
+
+
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Players By Rank <span class="caret"></span></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Players By Rank <span id="caret" class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Best to Worst</a></li>
                                         <li><a href="#">Worst to Best</a></li>
