@@ -1,7 +1,7 @@
 // app/routes.js
 var path = require('path');
 var mongoose = require("mongoose");
-mongoose.Promise = global.Promise
+mongoose.Promise = global.Promise;
 // Require all models
 var db = require("./models");
 

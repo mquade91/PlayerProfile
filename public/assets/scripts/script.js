@@ -48,10 +48,6 @@ $(document).ready(function() {
             $("#comments").val("");
 
         });
-
-
-
-
     });
 
     //Populating data from Mongo Database to allPlayers div on profile.html page
@@ -63,10 +59,14 @@ $(document).ready(function() {
 
 
             for (var i = 0; i < data.length; i++) {
+<<<<<<< HEAD
                 $("#allPlayers").prepend("<div  class='col-md-3'><div class='playerCard'><div></div><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + " ft" + "</p><p>" + "Weight: " + data[i].weight + " lbs" + "</p><p>" + "Dash: " + data[i].fortyTime + " s" + "</p><p>" + data[i].school + "</p><p>" + "" + data[i].position + "</p><p>" + data[i].comment + "</div></div>")
+=======
+
+                $("#allPlayers").prepend("<div  class='col-md-3'><div class='playerCard'><div></div><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + " ft" + "</p><p>" + "Weight: " + data[i].weight + " lbs" + "</p><p>" + "Dash: " + data[i].fortyTime + " s" + "</p><p>" + data[i].school + "</p><p>" + "" + data[i].position + "" + "</p></div></div>")
+>>>>>>> dff64692fcbef453d510a9757f38a1edecbf4bcc
             }
-        })
+        });
     }
     getResults()
-
 });
