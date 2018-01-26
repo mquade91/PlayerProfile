@@ -9,22 +9,22 @@ var mongoose = require("mongoose");
 
 
 // When a browser calls for the site, get the login page.
-router.get("/", function(req,res) {
-      res.send;
-      console.log(res);
-    });
+router.get("/", function(req, res) {
+  res.send;
+  console.log(res);
+});
 
 // A succesful log in will render the logged in page.
-router.get("/loggedIn", function(req,res) {
-      res.send;
-      console.log(res);
-    });
-    
+router.get("/loggedIn", function(req, res) {
+  res.send;
+  console.log(res);
+});
+
 // The input button will call for the input form page.
-router.get("/inputPage", function(req,res) {
-      res.send;
-      console.log(res);
-    });
+router.get("/inputPage", function(req, res) {
+  res.send;
+  console.log(res);
+});
 
 // The view all button will call for all Athletes from the db
 // Sort to put in alpha order
@@ -32,7 +32,7 @@ router.get("/inputPage", function(req,res) {
 router.get("/athletes", function(req, res) {
   db.Athletes
     .find({}).
-    sort({"lastName":-1})
+  sort({ "lastName": -1 })
     .populate("scouter")
     .then(function(dbAthletes) {
       // If we were able to successfully find Athletes
@@ -48,8 +48,8 @@ router.get("/athletes", function(req, res) {
 // The lookup button will call for all with a given last name.
 router.get("/athletes/lastName/", function(req, res) {
   db.Athletes
-    .find({"lastName": "lastName"})
-    .sort({"lastNAme":-1})
+    .find({ "lastName": "lastName" })
+    .sort({ "lastNAme": -1 })
     .populate("scouter")
     .then(function(dbAthletes) {
       // If we were able to successfully find Athletes
@@ -66,8 +66,8 @@ router.get("/athletes/lastName/", function(req, res) {
 // Sort by rating
 router.get("/athletes/position/", function(req, res) {
   db.Athletes
-    .find({"position": "position"})
-    .sort({"rating":-1})
+    .find({ "position": "position" })
+    .sort({ "rating": -1 })
     .populate("scouter")
     .then(function(dbAthletes) {
       // If we were able to successfully find Athletes
@@ -85,9 +85,8 @@ router.get("/athletes/position/", function(req, res) {
 router.get("/athletes/", function(req, res) {
   db.Athletes
     .find({})
-    .sort({"ranking":-1})
-    .populate("s
-    couter")
+    .sort({ "ranking": -1 })
+    .populate("scouter")
     .then(function(dbAthletes) {
       // If we were able to successfully find Athletes
       res.json(dbAthletes);
@@ -107,7 +106,7 @@ router.post("/athletes/:id", function(req, res) {
     .then(function(dbComment) {
 
     })
-    .then(function(dbAthlete,err) {
+    .then(function(dbAthlete, err) {
 
       res.json(dbAthlete);
     })
@@ -125,7 +124,7 @@ router.put("/athletes/:id", function(req, res) {
     .then(function(dbAthlete) {
 
     })
-    .then(function(dbAthlete,err) {
+    .then(function(dbAthlete, err) {
       // If we were able to successfully update an Article,
       // send it back to the client
       res.json(dbAthlete);
@@ -137,5 +136,3 @@ router.put("/athletes/:id", function(req, res) {
 });
 
 module.exports = router;
-
-
