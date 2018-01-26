@@ -33,7 +33,7 @@ $(document).ready(function() {
                 alert("Fail! Try again!");
             }
 
-                      // Clear the form when submitting
+            // Clear the form when submitting
 
             $("#firstname").val("");
             $("#lastname").val("");
@@ -47,6 +47,7 @@ $(document).ready(function() {
             $("#overallRank").val("");
             $("#comments").val("");
 
+        });
     });
 
     function getResults() {
@@ -54,13 +55,9 @@ $(document).ready(function() {
             console.log(data);
 
             for (var i = 0; i < data.length; i++) {
-                $("#allPlayers").prepend("<div class='playerCard'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + "</p></div>")
+                $("#allPlayers").prepend("<div class='playerCard'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + "</p></div>");
             }
-        })
+        });
     }
-    getResults()
-
-
-
-});
+    getResults();
 });
