@@ -5,6 +5,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     
 }
+
 h1 {
     text-align: center;
     margin-top: 20px;
@@ -20,6 +21,7 @@ h1 {
 #navbarDropdown {
     color:white;
 }
+
 .login-wrapper {
     display: block;
     width: 400px;
@@ -36,6 +38,7 @@ h1 {
     background-color: #87CEFA;
    
 }
+
 .login {
     text-align: center;
 }
@@ -71,6 +74,11 @@ h1 {
     margin-top: 5px;
 }
 
+#navbar {
+    text-align: center;
+    float: none;
+    display: inline-block;
+}
 
 
 
