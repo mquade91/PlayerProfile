@@ -53,7 +53,7 @@ $(document).ready(function() {
 
 
     });
-    
+
     //Populating data from Mongo Database to allPlayers div on profile.html page
 
     function getResults() {
