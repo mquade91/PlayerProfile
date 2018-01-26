@@ -87,10 +87,21 @@ body {
 
 }
 
-#card {
-    color: red;
-    /*border-style: dotted;*/
-    border-color: #87cefa;
+
+h1 {
+    font-family: Playfair Display SC;
+    font-size: 18px;
+}
+
+p {
+
+    color: black;
+
+}
+
+.dropdown-menu {
+    text-align: center;
+
 }
 
 @media (min-width: 1680) {
