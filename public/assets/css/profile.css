@@ -90,6 +90,14 @@ body {
 .col-md-3 {
     border-style: double;
     border-color: white;
+
+}
+
+.commentScroll {
+    background-color: white;
+    height: 50px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 
