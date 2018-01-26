@@ -17,13 +17,29 @@ body {
     text-align: center;
     float: none;
     display: inline-block;
-    background-color: #87cefa;
+    background-color: #2186c8;
+    height: 55px;
+    padding-top: 5px;
+    margin-bottom: -5px;
+    font-style: italic;
+    color: white;
+}
+
+.container-fluid {
+    background-color: #2186c8;
+}
+
+.dropdown {
+    background-color: #2186c8;
+    color: white;
 }
 
 
 
 #header {
     text-align: center;
+    color: #2186c8;
+
 }
 
 .container {
@@ -32,7 +48,7 @@ body {
 
 #inner-jumbotron {
     border-style: solid;
-    border-color: #87cefa;
+    border-color: #2186c8;
     /*border-width: px;*/
 }
 
@@ -46,7 +62,7 @@ body {
 
 .player-attributes {
     font-family: 'Playfair Display SC', serif;
-    color: red;
+    color: #2186c8;
     text-align: left;
     font-size: 12px;
 }
@@ -55,6 +71,7 @@ body {
 #playerName {
     font-size: 22px;
     font-family: lucida calligraphy;
+    color: #2186c8;
 
 }
 
@@ -66,6 +83,7 @@ body {
     font-family: Playfair Display SC;
     font-size: 40px;
     text-align: center;
+    color: black;
 }
 
 .categories {
@@ -74,12 +92,12 @@ body {
 
 #card-photo {
     border-style: double;
-    border-color: #87cefa;
+    border-color: #2186c8;
     border-width: 5px;
 }
 
 #indicators {
-    background-color: #87cefa;
+    background-color: #2186c8;
 }
 
 #allPlayers {
@@ -90,12 +108,15 @@ body {
 .col-md-3 {
     border-style: double;
     border-color: white;
+    background-color: #2186c8;
+    color: white;
 
 }
 
 .commentScroll {
-    background-color: white;
-    height: 50px;
+    color: #4d85ff;
+    background-color: #87cefa;
+    height: 75px;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -104,6 +125,7 @@ body {
 h1 {
     font-family: Playfair Display SC;
     font-size: 18px;
+    color: #87cefa;
 }
 
 #caret {
@@ -118,12 +140,18 @@ h1 {
     color: grey;
     /*font-family: 'Oswald', sans-serif;*/
     font-size: 14px;
+    background-color: #2186c8;
+    color: white;
 }
 
 p {
 
-    color: black;
+    color: white;
 
+}
+
+.navbar navbar-default {
+    background-color: #2186c8;
 }
 
 .dropdown-menu {

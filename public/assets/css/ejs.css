@@ -3,51 +3,55 @@ body {
     background-color: #87CEFA;
     background-image: url("./public/assets/images/background.jpg");
     font-family: 'Montserrat', sans-serif;
-    padding-top:80px;
-            
+    padding-top: 80px;
+
 }
 
 
 .well {
-    background-color: #4d85ff;
+    background-color: #2186c8;
 
 }
 
 
-h1,h2 {
-    color: #4d85ff;
-    
+h1,
+h2 {
+    color: #2186c8;
+
 }
 
 
 #navbar {
     text-align: center;
     float: none;
-    background-color: #4d85ff;
+    background-color: #2186c8;
 
 }
 
 
-.navbarText{
+.navbarText {
     font-style: italic;
-    color:white;
-   
+    color: white;
+
 }
 
 /*still figuring this element out compared to above*/
-.navbar-header{
+
+.navbar-header {
     font-style: italic;
-    color:white;
-    
+    color: white;
+
 }
+
 .footer {
     bottom: -65px;
-    background-color: #4d85ff;
+    background-color: #2186c8;
     color: white;
     text-align: center;
     display: block;
     position: relative;
 }
+
 .foot {
     display: inline-block;
     font-size: 14px;
