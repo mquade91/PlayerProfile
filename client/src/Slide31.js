@@ -1,6 +1,6 @@
 import React from "react";
 
- const Present3 = () => (
+ const Slide31 = () => (
     <div className="bodyIn">
         <div className="bodyHead">
             <h5>Features</h5>
@@ -14,17 +14,16 @@ import React from "react";
                 </ul>
             </div>
             <div className="bodyHead">
-                <h5>Possibilities</h5>
+                <h5>Benefits</h5>
             </div>
             <div className="bodyList">
                 <ul className="list">
-                    <li>Interface Flexability</li>
-                    <li>Database Adaptability</li>
-                    <li>Model-View-Controller Adaptability</li>
+                    <li>The Interface is Flexible</li>
+                    <li>The Database is Adaptable</li>
                 </ul>
             </div>
     </div>
                 
  );
 
-export default Present3;
+export default Slide31;
