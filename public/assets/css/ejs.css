@@ -15,6 +15,12 @@ h1 {
     /*color: red;*/
 }
 
+#navbar {
+    text-align: center;
+    float: none;
+    /*display: inline-block;*/
+}
+
 @media (min-width: 375) {
     #scouts {
         width: 350px;
