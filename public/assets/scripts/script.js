@@ -59,9 +59,8 @@ $(document).ready(function() {
 
 
             for (var i = 0; i < data.length; i++) {
-
-                $("#allPlayers").prepend("<div  class='col-md-3'><div class='playerCard'><div></div><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + " ft" + "</p><p>" + "Weight: " + data[i].weight + " lbs" + "</p><p>" + "Dash: " + data[i].fortyTime + " s" + "</p><p>" + data[i].school + "</p><p>" + "" + data[i].position + "</p><p>" + data[i].comment + "</div></div>")
-
+                $("#allPlayers").prepend("<div  class='col-md-3'><div class='playerCard'><div></div><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + " ft" + "</p><p>" + "Weight: " + data[i].weight + " lbs" + "</p><p>" + "Dash: " + data[i].fortyTime + " s" + "</p><p>" + data[i].school + "</p><p>" + "" + data[i].position + "</p><p>" + "<div class='commentScroll'>" +
+                    data[i].comment + "</div></div></div>")
             }
         });
     }
