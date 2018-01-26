@@ -1,18 +1,75 @@
 body {
-    background-color: #87cefa;
+    margin: 0em;
+    background-color: #87CEFA;
+    background-image: url("./public/assets/images/background.jpg");
+    font-family: 'Montserrat', sans-serif;
+    padding-top:80px;
+            
 }
+
 
 .well {
-    background-color: lightGrey;
+    background-color: #4d85ff;
 
 }
 
-h1 {
-    font-family: Playfair Display SC;
+
+h1,h2 {
+    color: #4d85ff;
+    
 }
 
-#scouts {
-    /*color: red;*/
+
+#navbar {
+    text-align: center;
+    float: none;
+    background-color: #4d85ff;
+
+}
+
+
+.navbarText{
+    font-style: italic;
+    color:white;
+   
+}
+
+/*still figuring this element out compared to above*/
+.navbar-header{
+    font-style: italic;
+    color:white;
+    
+}
+.footer {
+    bottom: -65px;
+    background-color: #4d85ff;
+    color: white;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+.foot {
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px 20px 0px 20px;
+    text-align: center;
+}
+
+.alink:link {
+    color: white;
+}
+
+.alink:hover {
+    color: #ccffff;
+}
+
+.alink:visited {
+    color: #e6ccff;
+}
+
+.icons {
+    width: 30px;
+    margin-top: 5px;
 }
 
 @media (min-width: 375) {
