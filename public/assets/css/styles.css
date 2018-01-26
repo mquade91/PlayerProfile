@@ -6,10 +6,12 @@ body {
     background-image: url("./public/assets/images/background.jpg");
     font-family: 'Montserrat', sans-serif;
 }
+
 h1 {
     text-align: center;
     margin-top: 20px;
 }
+
 .login-wrapper {
     display: block;
     width: 400px;
@@ -27,6 +29,7 @@ h1 {
     padding: 0;
     background-color: #87CEFA;
 }
+
 .login {
     text-align: center;
 
@@ -65,6 +68,11 @@ h1 {
     margin-top: 5px;
 }
 
+#navbar {
+    text-align: center;
+    float: none;
+    display: inline-block;
+}
 
 
 
