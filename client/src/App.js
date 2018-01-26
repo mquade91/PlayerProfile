@@ -10,13 +10,13 @@ class App extends Component {
     handlePanelClick = (id) => {
         switch (id) {
             case "mattPhoto":
-                this.setState({currentSlide: 1});
+                this.setState({currentSlide: 10});
                     break;
             case "eddiePhoto":
-                this.setState({currentSlide: 2});
+                this.setState({currentSlide: 20});
                 break;
             case "michaelPhoto":
-                this.setState({currentSlide: 3});
+                this.setState({currentSlide: 30});
                 break;    
             case "chasPhoto":
                 this.setState({currentSlide: 0});
@@ -25,7 +25,28 @@ class App extends Component {
             console.log("Bad id");
         }
     }
+    
+     handleAppClick = () => {
+         let current = this.state.currentSlide;
+        switch (this.state.currentSlide) {
+            case 10:
+                current = current + 1;
+                this.setState({currentSlide: current});
+                break;
+            case 20:
+                current = current + 1;
+                this.setState({currentSlide: current});
+                break;
+            case 30:
+                current = current + 1;
+                this.setState({currentSlide: current});
+                break;
+        }
+        console.log(this.state.currentSlide);
+    }
+    
      render() {
+        
          return (
             <div className="wrapper">
                 <div className="left">
@@ -38,7 +59,7 @@ class App extends Component {
                 </div>
                 <div className="center">
                     <div className="centerTop">
-                        <h2>SmartScout</h2>
+                        <h2 onClick={() => { this.handleAppClick()}}>SmartScout</h2>
                     <About slide = {this.state.currentSlide}/>
                     </div>
                 </div>

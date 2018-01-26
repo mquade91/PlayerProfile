@@ -78,7 +78,16 @@
     background-color: #87cefa;
 }
 
+#allPlayers {
+    text-align: center;
 
+}
+
+#card {
+    color: red;
+    /*border-style: dotted;*/
+    border-color: #87cefa;
+}
 
 @media (min-width: 1680) {
     .container {
