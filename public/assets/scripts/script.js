@@ -59,18 +59,8 @@ $(document).ready(function() {
 
 
             for (var i = 0; i < data.length; i++) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                $("#allPlayers").prepend("<div  class='col-md-3'><div class='playerCard'><div></div><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + " ft" + "</p><p>" + "Weight: " + data[i].weight + " lbs" + "</p><p>" + "Dash: " + data[i].fortyTime + " s" + "</p><p>" + data[i].school + "</p><p>" + "" + data[i].position + "</p><p>" + data[i].comment + "</div></div>")
-=======
-
-                $("#allPlayers").prepend("<div  class='col-md-3'><div class='playerCard'><div></div><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + " ft" + "</p><p>" + "Weight: " + data[i].weight + " lbs" + "</p><p>" + "Dash: " + data[i].fortyTime + " s" + "</p><p>" + data[i].school + "</p><p>" + "" + data[i].position + "" + "</p></div></div>")
->>>>>>> dff64692fcbef453d510a9757f38a1edecbf4bcc
-=======
-
-                $("#allPlayers").prepend("<div  class='col-md-3'><div class='playerCard'><div></div><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + " ft" + "</p><p>" + "Weight: " + data[i].weight + " lbs" + "</p><p>" + "Dash: " + data[i].fortyTime + " s" + "</p><p>" + data[i].school + "</p><p>" + "" + data[i].position + "</p><p>" + data[i].comment + "</div></div>")
-
->>>>>>> 00fc7a635e0d0a6759a70f6d093710e95afefe18
+                $("#allPlayers").prepend("<div  class='col-md-3'><div class='playerCard'><div></div><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + " ft" + "</p><p>" + "Weight: " + data[i].weight + " lbs" + "</p><p>" + "Dash: " + data[i].fortyTime + " s" + "</p><p>" + data[i].school + "</p><p>" + "" + data[i].position + "</p><p>" + "<div class='commentScroll'>" +
+                    data[i].comment + "</div></div></div>")
             }
         });
     }
