@@ -87,6 +87,11 @@ body {
 
 }
 
+.col-md-3 {
+    border-style: double;
+    border-color: white;
+}
+
 
 h1 {
     font-family: Playfair Display SC;
