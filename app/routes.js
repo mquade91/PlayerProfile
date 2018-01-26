@@ -39,6 +39,16 @@ module.exports = function(app, passport) {
         failureFlash: true //allow flash messages
     }));
 
+//GET all USER INFO (using to check populate)
+    app.get('/users', function(req,res){
+        db.User
+        .find({})
+        .populate('athletes')
+        .then(function(dbUsers){
+            res.json(dbUsers);
+        });
+    });
+
 //PROFILE section
 //must be logged in to visit this page
 //using route middleware to verify this (the isLoggedIn function)
@@ -59,18 +69,17 @@ module.exports = function(app, passport) {
         res.sendFile(path.join(__dirname, "../public/newPlayer.html"));
     });
 
-//ADD NEW PLAYER
-    app.post('/newPlayer', function (req, res){
-        console.log("Body here");
-        console.log(req.body);
-        
+//POST to ADD NEW PLAYER
+    app.post('/newPlayer', isLoggedIn, function (req, res){
         db.Athlete.create(req.body)
-            .then(function(athlete) {
-                console.log("post create" + athlete);
+            .then(function(dbAthletes) {
+                console.log("post create");
+                console.log(dbAthletes);
+                return db.User.findOneAndUpdate({_id:req.user._id}, { $push: { athletes: dbAthletes._id } }, { new: true });
             });
     });
 
-//GET players page
+//GET ATHLETES page
     app.get('/athletes', function(req, res) {
         res.sendFile(path.join(__dirname, "../public/profile.html"));
     });

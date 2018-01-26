@@ -1,3 +1,7 @@
+body {
+    background-color: #87cefa;
+}
+
 .jumbotron {
     border-style: solid;
     border-color: #87cefa;
@@ -13,7 +17,7 @@
     text-align: center;
     float: none;
     display: inline-block;
-    /*background-color: #87cefa;*/
+    background-color: #87cefa;
 }
 
 
@@ -78,7 +82,32 @@
     background-color: #87cefa;
 }
 
+#allPlayers {
+    text-align: center;
 
+}
+
+.col-md-3 {
+    border-style: double;
+    border-color: white;
+}
+
+
+h1 {
+    font-family: Playfair Display SC;
+    font-size: 18px;
+}
+
+p {
+
+    color: black;
+
+}
+
+.dropdown-menu {
+    text-align: center;
+
+}
 
 @media (min-width: 1680) {
     .container {
