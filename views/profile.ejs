@@ -6,21 +6,19 @@
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
         <title>Smart Scout</title>
        <!-- Latest compiled and minified CSS -->
-        <!--<link rel="stylesheet" href="./assets/css/styles.css" type="text/css" />-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
         <link rel ="stylesheet" href="./assets/css/ejs.css"/>
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
         <script src="./assets/scripts/script.js"></script>
         <style>
-            body{
-                padding-top:80px;
-            }
+            
         </style>
-        <!--<link rel="stylesheet" href="./assets/css/styles.css" type="text/css" />-->
+    
 
     </head>
     <body>
-     <nav id="navbar" class="navbar navbar-default">
+    <div class="container">
+     <nav id="navbar" class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -30,22 +28,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-      <a class="navbar-brand" href="#">SmartScout</a>
+      <a class="navbar-brand" href="/profile" class="navbarText">SmartScout</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/athletes">Current Players <span class="sr-only">(current)</span></a></li>
-      
+        <li class="active"><a href="/athletes" class="navbarText">Current Players <span class="sr-only">(current)</span></a></li>
       <!-- FIX THIS ROUTE!! -->                                                                                                                                          <!---->
-        <li><a href="/newPlayer">Add New Player</a></li>
-     
-     
+        <li><a href="/newPlayer" class="navbarText">Add New Player</a></li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/logout" class="btn btn-default btn-sm">Logout</a></li>
+        <!--<li id="logoutButton"><a href="/logout" class="btn btn-default btn-sm">Logout</a></li>-->
+        <li class="active"><a href="/logout" class="navbarText">Logout<span class="sr-only">(current)</span></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -53,8 +48,10 @@
         
         <div class="container">
             <div class="page-header text-center">
-                <h1>Thank you <%= user.info.firstName %> for using SmartScout</h1><br>
+                <h1>Welcome <%= user.info.firstName %> to SmartScout</h1><br>
             </div>
+            <h2>Team Employee Directory</h2>
+            
             <div class="row">
                  <!--local info-->
                 <div class="col-sm-6">
@@ -74,6 +71,28 @@
                 
             </div>
         </div>
-        
+    </div>
+    
+    <div class="footer">
+      <div class="col-md-12">
+          <div class="foot">
+            <a id="bit" class="alink" href="../client/public/index.html">About ScoutSmart</a>
+          </div>
+          <div class="foot">
+            <a href="http://facebook.com" target="_blank"><img class="icons" src="./assets/images/facebook.png" alt="Facebook Icon and Link"/></a>
+          </div>
+          <div class="foot">
+            <a href="http://twitter.com" target="_blank"><img class="icons" src="./assets/images/twitter.png" alt="Twitter Icon and Link"/></a>
+          </div>
+          <div class="foot">
+            <a id="contact" class="alink" href="contact.html">Contact Us</a>
+          </div>
+          <div class="subfooter">
+            <div id="copyright">Copyright © 2018 Scout Smart</div>
+          </div>
+
+        </div>
+     </div>
+    
     </body>
 </html>
