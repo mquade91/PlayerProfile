@@ -1,15 +1,25 @@
 body {
     margin: 0em;
-    width: 100%;
-    height: 75%;
     background-color: #87CEFA;
     background-image: url("./public/assets/images/background.jpg");
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
+    color: #4d85ff;
+}
+.col-centered {
+    float:none;
+    margin: 0 auto;
+}
+.navbar {
+    background-color: #4d85ff;
+}
+#navbarDropdown {
+    color:white;
 }
 
 .login-wrapper {
@@ -19,31 +29,27 @@ h1 {
     margin: 0 auto 10px;
 
 }
-
 .jumbotron {
     font-style: italic;
-    height: 150px;
+    height: 100px;
     margin: auto;
     text-align: center;
-    color: white;
     padding: 0;
     background-color: #87CEFA;
+   
 }
 
 .login {
     text-align: center;
-
 }
-
 .footer {
-    bottom: -300px;
+    bottom: -65px;
     background-color: #4d85ff;
     color: white;
     text-align: center;
     display: block;
     position: relative;
 }
-
 .foot {
     display: inline-block;
     font-size: 14px;
