@@ -1,9 +1,10 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
 body {
-    margin: 0em;
+    margin: 20px;
     background-color: #87CEFA;
-    background-image: url("./public/assets/images/background.jpg");
+    /*background-image: url("./public/assets/images/background.jpg");*/
     font-family: 'Montserrat', sans-serif;
-    
 }
 
 h1 {
@@ -42,6 +43,7 @@ h1 {
 .login {
     text-align: center;
 }
+
 .footer {
     bottom: 0px;
     background-color: #4d85ff;
