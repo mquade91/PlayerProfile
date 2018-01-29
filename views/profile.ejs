@@ -9,12 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
         <link rel ="stylesheet" href="./assets/css/ejs.css"/>
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
-        <script src="./assets/scripts/script.js"></script>
-        <style>
-            
-        </style>
-    
-
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     </head>
     <body>
     <div class="container">
@@ -53,21 +48,10 @@
             <h2>Team Employee Directory</h2>
             
             <div class="row">
-                 <!--local info-->
-                <div class="col-sm-6">
-                    <div class="well">
-                        <h3><span class="fa fa-user"></span>Local</h3>
-                        
-                        <p id="scouts">
-                            <strong>ID</strong>: <%= user._id %><br>
-                            <strong>Email</strong>: <%= user.local.email %><br>
-                            <strong>Password</strong>: <%= user.local.password %><br>
-                            <strong>First Name</strong>: <%= user.info.firstName %><br>
-                            <strong>Last Name</strong>: <%= user.info.lastName %><br>
-                            <strong>Area Covered</strong>: <%= user.info.areaCovered %><br>
-                        </p>
-                    </div>
-                </div>
+            
+                <div id ="userDataDiv">
+                <!--USER INFORMATION IS BE PREPENDED HERE!E-->
+              </div>
                 
             </div>
         </div>
@@ -95,4 +79,5 @@
      </div>
     
     </body>
+<script src="./assets/scripts/profile.js"></script>
 </html>
