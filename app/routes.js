@@ -2,6 +2,7 @@
 var path = require('path');
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
+
 // Require all models
 var db = require("./models");
 
@@ -37,7 +38,12 @@ module.exports = function(app, passport) {
         successRedirect: '/profile', //secure profile page
         failureRedirect: '/signup', //signup page
         failureFlash: true //allow flash messages
+        
+    
     }));
+        
+        
+   
 
     //GET all USER INFO (using to check populate)
     app.get('/users', function(req, res) {
@@ -65,7 +71,7 @@ module.exports = function(app, passport) {
     });
 
     //get NEW PLAYER FORM
-    app.get('/newPlayer', function(req, res) {
+    app.get('/newPlayer', isLoggedIn, function(req, res) {
         res.sendFile(path.join(__dirname, "../public/newPlayer.html"));
     });
 
