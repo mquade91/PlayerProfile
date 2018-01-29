@@ -10,6 +10,7 @@ body {
     height: 350px;
     text-align: center;
 
+
 }
 
 #jumbotron {
@@ -184,14 +185,26 @@ p {
 }
 
 @media (min-width: 1680) {
+
+    .categories {
+        width: 33%;
+    }
+
+    #card-photo {
+        width: 33%;
+    }
+
+
+
+    #carousel-container {
+        width: 1640px;
+    }
     .container {
-        width: 1640;
+        width: 1640px;
     }
 
     .jumbotron {
-        width: 16400px;
-        height: 30%;
-        width: 30%;
+        width: 100%
     }
 
     .player-attributes {
