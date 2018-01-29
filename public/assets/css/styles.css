@@ -1,9 +1,10 @@
-body {
-    margin: 0em;
-    background-color: #87CEFA;
-    background-image: url("./public/assets/images/background.jpg");
-    font-family: 'Montserrat', sans-serif;
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
+body {
+    margin: 20px;
+    background-color: #87CEFA;
+    /*background-image: url("./public/assets/images/background.jpg");*/
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
