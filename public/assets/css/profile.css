@@ -167,12 +167,12 @@ h1 {
     color: white;
 }
 
-/*p {
-    */
+p {
 
-/*    color: white;*/
+    font-size: 13px;
+    color: white;
 
-/*}*/
+}
 
 .navbar navbar-default {
     background-color: #2186c8;
