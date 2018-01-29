@@ -10,41 +10,35 @@ class App extends Component {
     handlePanelClick = (id) => {
         switch (id) {
             case "mattPhoto":
-                this.setState({currentSlide: 200});
+                this.setState({currentSlide: 10});
                     break;
             case "eddiePhoto":
-                this.setState({currentSlide: 600});
+                this.setState({currentSlide: 20});
                 break;
             case "michaelPhoto":
-                this.setState({currentSlide: 400});
+                this.setState({currentSlide: 30});
                 break;    
             case "chasPhoto":
-                this.setState({currentSlide: 800});
+                this.setState({currentSlide: 0});
                 break;
-            default: this.setState({currentSlide: 100});
+            default: this.setState({centerSection: 0});
             console.log("Bad id");
         }
     }
     
      handleAppClick = () => {
-         console.log(this.state.currentSlide);
          let current = this.state.currentSlide;
-         console.log(current);
         switch (this.state.currentSlide) {
-            case 100:
-                current = current + 100;
+            case 10:
+                current = current + 1;
                 this.setState({currentSlide: current});
                 break;
-            case 200:
-                current = current + 100;
+            case 20:
+                current = current + 1;
                 this.setState({currentSlide: current});
                 break;
-            case 400:
-                current = current + 100;
-                this.setState({currentSlide: current});
-                break;
-            case 600:
-                current = current + 100;
+            case 30:
+                current = current + 1;
                 this.setState({currentSlide: current});
                 break;
             default: return (
@@ -62,13 +56,13 @@ class App extends Component {
                     <div className="leftTop">
                         <h4>Our Leadership</h4>
                     </div>
-                    <div className="individuals">
+                    <div className="individualPhotos">
                         <Panel handlePhotoClick = {this.handlePanelClick}/>
                     </div>
                 </div>
                 <div className="center">
                     <div className="centerTop">
-                        <h2 onClick={() => { this.handleAppClick()}}>Keep Pounding!</h2>
+                        <h2 onClick={() => { this.handleAppClick()}}>SmartScout</h2>
                     <About slide = {this.state.currentSlide}/>
                     </div>
                 </div>

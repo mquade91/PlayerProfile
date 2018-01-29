@@ -28,6 +28,7 @@ app.use(bodyParser());
 
 
 //use express static to server the public folder as static directory
+app.use("/about-component", express.static("about-component/umd"));
 app.use(express.static("public"));
 
 //may not need this depending on if we use EJS or not??
