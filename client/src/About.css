@@ -26,9 +26,20 @@
     margin-top: 50px;
 }
 
+h4 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
 .left {
     display: grid;
-    grid-template-rows: minmax(200, 250);
+    grid-template-rows: 150px auto;
+    margin-left: 50px;
     text-align: center;
 }
 
@@ -37,13 +48,13 @@
 }
 
 .individualPhoto {
-    width: 50px;
+    width: 100px;
 }
 
 .Matt {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    height: 150px;
+
 }
 
 .Eddie {
@@ -67,10 +78,6 @@
 .center {
     display: grid;
     grid-template-columns: 4fr;
-}
-
-.centerTop h2 {
-    font-weight: 900;
 }
 
 .centerHead {
@@ -110,7 +117,7 @@
 
 .officeInfo {
     grid-column: 1 / 2;
-    grid-row: 3;
+    grid-row: 3 /4;
     margin-right: 50px;
 }
 
