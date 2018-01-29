@@ -11,49 +11,51 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/newPlayer.css" type="text/css" />
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
   <script src="./assets/scripts/script.js"></script>
 </head>
 
 <body>
-    
+
   <div class="container">
     <div class="col-md-12" id="header">
       <span>
         <h1>SmartScout <a href="/profile"><img id="panthers" src="./assets/images/logo.png" width="100px"></a></h1>
       </span>
     </div>
-      <form>
-        <h2>Athlete information</h2>
-        <div class="form-group">
-          <input type="text" class="form-control" id="firstname" aria-describedby="firstname" placeholder="Enter First Name">
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="lastname" aria-describedby="lastname" placeholder="Enter Last Name">
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="height" aria-describedby="height" placeholder="Enter Height in ft.">
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="weight" aria-describedby="weight" placeholder="Enter Weight in lbs.">
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="dash" aria-describedby="dash" placeholder="Enter 40yard dash time in sec.">
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="school" aria-describedby="school" placeholder="Enter School">
-        </div>
-        <div class="form-group">
-          <select class="form-control" id="position">
+    <form>
+      <h2>Athlete information</h2>
+      <div class="form-group">
+        <input type="text" class="form-control" id="firstname" aria-describedby="firstname" placeholder="Enter First Name">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="lastname" aria-describedby="lastname" placeholder="Enter Last Name">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="height" aria-describedby="height" placeholder="Enter Height in ft.">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="weight" aria-describedby="weight" placeholder="Enter Weight in lbs.">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="dash" aria-describedby="dash" placeholder="Enter 40yard dash time in sec.">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="school" aria-describedby="school" placeholder="Enter School">
+      </div>
+      <div class="form-group">
+        <select class="form-control" id="position">
                 <option>QB</option>
-                <option>WR</option>
                 <option>RB</option>
+                <option>FB</option>
+                <option>WR</option>
                 <option>TE</option>
-                <option>OT</option>
-                <option>G</option>
-                <option>DE</option>
-                <option>DT</option>
+                <option>OL</option>
+                <option>DL</option>
                 <option>LB</option>
                 <option>DB</option>
+                <option>FS</option>
+                <option>SS</option>
                 <option>K</option>
                 <option>P</option>
           </select> 
@@ -77,28 +79,42 @@
         </div>
         <div>
           <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="positionRating" aria-describedby="position" placeholder="Enter Position Rating">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="overallRank" aria-describedby="overall" placeholder="Enter Overall Rank">
+      </div>
+      <div class="form-group">
+        <label for="comment">Addtional comments:</label>
+        <textarea class="form-control" id="comments" rows="5"></textarea>
+      </div>
+      <div>
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+      </div>
     </form>
-    </div>
+  </div>
   <div class="footer">
     <div class="col-md-12">
-        <div class="foot">
-          <a id="bit" class="alink" href="../playerprofile/public/index.html">About ScoutSmart</a>
-        </div>
-        <div class="foot">
-          <a href="http://facebook.com" target="_blank"><img class="icons" src="./assets/images/facebook.png" alt="Facebook Icon and Link"/></a>
-        </div>
-        <div class="foot">
-          <a href="http://twitter.com" target="_blank"><img class="icons" src="./assets/images/twitter.png" alt="Twitter Icon and Link"/></a>
-        </div>
-        <div class="foot">
-          <a id="contact" class="alink" href="contact.html">Contact Us</a>
-        </div>
-        <div class="subfooter">
-          <div id="copyright">Copyright © 2018 Scout Smart</div>
-        </div>
+      <div class="foot">
+        <a id="bit" class="alink" href="../playerprofile/public/index.html">About ScoutSmart</a>
+      </div>
+      <div class="foot">
+        <a href="http://facebook.com" target="_blank"><img class="icons" src="./assets/images/facebook.png" alt="Facebook Icon and Link"/></a>
+      </div>
+      <div class="foot">
+        <a href="http://twitter.com" target="_blank"><img class="icons" src="./assets/images/twitter.png" alt="Twitter Icon and Link"/></a>
+      </div>
+      <div class="foot">
+        <a id="contact" class="alink" href="contact.html">Contact Us</a>
+      </div>
+      <div class="subfooter">
+        <div id="copyright">Copyright © 2018 Scout Smart</div>
       </div>
     </div>
-</div>
+  </div>
+  </div>
 </body>
+
 </html>
