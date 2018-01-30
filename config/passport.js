@@ -20,9 +20,6 @@ module.exports = function(passport) {
 
     //LOCAL SIGN UP
     passport.use('local-signup', new LocalStrategy({
-            //default
-            //userNameField: 'username'
-            //email
             usernameField: 'email',
             passwordField: 'password',
             passReqToCallback: true //allows us to pass back the entire request to the callback
@@ -30,7 +27,7 @@ module.exports = function(passport) {
         },
 
         function(req, email, password, done) {
-
+           
             //Scouter.find wont fire unless data is sent back
             process.nextTick(function() {
 
@@ -43,18 +40,21 @@ module.exports = function(passport) {
                         return done(null, false, req.flash('signupMessage', "That email is already taken"));
                     }
                     else {
-                        //if theres no user w/ tht email
+                        //if theres no user w/ tht email create new one
 
                         var newUser = new User();
 
                         //set credentials for user
                         newUser.local.email = email;
                         newUser.local.password = newUser.generateHash(password);
-                        newUser.info = {
-                            firstName: newUser.firstName,
-                            lastName: newUser.lastName,
-                            areaCovered: newUser.areaCovered
-                        };
+                        newUser.info.firstName = req.body.firstName;
+                        newUser.info.lastName = req.body.lastName;
+                        newUser.info.areaCovered = req.body.areaCovered;
+                        // {
+                        //     firstName: ,
+                        //     lastName: lastName,
+                        //     areaCovered: areaCovered
+                        // };
                         //save the user
                         newUser.save(function(err) {
                             if (err)
@@ -64,8 +64,9 @@ module.exports = function(passport) {
                     }
                 });
             });
-        }
-    ));
+        }));
+        
+
 
 
     //LOCAL SIGN IN
@@ -77,17 +78,17 @@ module.exports = function(passport) {
         },
         function(req, email, password, done) { //gettin email and password from the form
 
-            User.findOne({ 'local.email': email }, function(err, Scouter) {
+            User.findOne({ 'local.email': email }, function(err, User) {
                 if (err)
                     return done(err);
                 //if no Scout
-                if (!Scouter)
+                if (!User)
                     return done(null, false, req.flash('loginMessage', 'No Scout found.'));
                 //if password is not valid
-                if (!Scouter.validPassword(password))
+                if (!User.validPassword(password))
                     return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'));
                 //correct info
-                return done(null, Scouter);
+                return done(null, User);
             });
         }
     ));

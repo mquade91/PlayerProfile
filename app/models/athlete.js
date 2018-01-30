@@ -12,7 +12,7 @@ var AthleteSchema =  Schema({
     required: true
   },
   height: {
-    type: Number,
+    type: String,
   },
   weight: {
     type: Number,

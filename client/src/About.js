@@ -1,49 +1,50 @@
 import React, { Component } from "react";
 
 import "./About.css";
-import Slide0 from "./Slide0";
-import Slide10 from "./Slide10";
-import Slide11 from "./Slide11";
-import Slide20 from "./Slide20";
-import Slide21 from "./Slide21";
-import Slide30 from "./Slide30";
-import Slide31 from "./Slide31";
+import Slide100 from "./slides/Slide100";
+import Slide200 from "./slides/Slide200";
+import Slide300 from "./slides/Slide300";
+import Slide400 from "./slides/Slide400";
+import Slide500 from "./slides/Slide500";
+import Slide600 from "./slides/Slide600";
+import Slide700 from "./slides/Slide700";
+import Slide800 from "./slides/Slide800";
 
 class About extends Component {
    
     render() {
 
          switch (this.props.slide) {
-            case 0:
+            case 100:
                 return (
-                    <Slide0/>
+                    <Slide100/>
                     );
-            case 10:
+            case 200:
                 return (
-                <Slide10/>
+                <Slide200/>
                 );
-            case 11:
+            case 300:
                 return (
-                <Slide11/>
+                <Slide300/>
                 );
-            case 20:
+            case 400:
                 return (
-                    <Slide20/>
+                    <Slide400/>
                     );
-            case 21:
+            case 500:
                 return (
-                    <Slide21/>
+                    <Slide500/>
                     );
-            case 30:
+            case 600:
                 return (
-                    <Slide30/>
+                    <Slide600/>
                     );
-            case 31:
+            case 700:
                 return (
-                    <Slide31/>
+                    <Slide700/>
                     );
             default: return (
-                    <Slide0/>
+                    <Slide800/>
                 );
         }
     }
