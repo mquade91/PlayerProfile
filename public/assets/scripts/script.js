@@ -89,6 +89,7 @@ $(document).ready(function() {
             }
         })
     })
+
     //FOR RANKING SORTING
     function getRankings() {
         $.getJSON("/athletesInfo/worstToBest", function(data) {
