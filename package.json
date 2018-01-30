@@ -21,7 +21,7 @@
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "start": "concurrently \"PORT=8081 nodemon server.js\" \"npm run client\"",
     "build": "node scripts/build.js"
   },
   "devDependencies": {
