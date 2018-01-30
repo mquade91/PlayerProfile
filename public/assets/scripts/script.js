@@ -5,6 +5,18 @@ $(document).ready(function() {
     $("#submit").on("click", function(event) {
         event.preventDefault();
 
+        let ratingHolder = []
+        $("input:radio").each(function() {
+            if ($(this).is(':checked') === true) {
+                ratingHolder.push(($(this).val()));
+            }
+        });
+        console.log(ratingHolder)
+
+        let rating = parseInt(ratingHolder[0])
+
+        console.log("rating" + rating)
+
         var newPlayer = {
             firstName: $("#firstname").val().trim(),
             lastName: $("#lastname").val().trim(),
@@ -13,10 +25,11 @@ $(document).ready(function() {
             fortyTime: $("#dash").val().trim(),
             school: $("#school").val().trim(),
             position: $("#position").val().trim(),
-            positionRating: $("#positionRating").val().trim(),
+            positionRating: rating,
             overallRank: $("#overallRank").val().trim(),
             comment: $("#comments").val().trim(),
         };
+
         console.log("test");
         console.log(newPlayer);
 
