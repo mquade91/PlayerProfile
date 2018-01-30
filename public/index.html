@@ -13,14 +13,14 @@
   <script src="./assets/scripts/script.js"></script>
 </head>
 
-<body>
-  <div class="container">
-    <div class="col-md-12" id="header">
-      <span>
-        <h1>SmartScout <a href="/profile"><img id="panthers" src="./assets/images/logo.png" width="100px"></a></h1>
-      </span>
-      <div class="jumbotron">
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+  <body>
+    <div class="row">
+      <div class="col-md-6 col-centered" id="header">
+          <span>
+            <h1>SmartScout <a href="/profile"><img id="panthers" src="./assets/images/logo.png" width="100px"></a></h1>
+          </span>
+        <div class="jumbotron">
+        <nav class="navbar navbar-expand-lg">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -56,46 +56,48 @@
             </ul>
           </div>
         </nav>
+      </div>   
+      <div class="login-wrapper">
+        <h1><span class="fa fa-sign-in"></span>Login</h1>
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password">
+          </div>
+          <button type="submit" class="btn btn-warning btn-lg">Login</button>
+        </form>
+        <hr>
+        <p>Need to an account?<a href="/signup"> Sign Up</a></p>
+        <!--<p> Or Go <a href="/">Home</a>.</p>-->
       </div>
-    </div>
-    <div class="login-wrapper">
-      <h1><span class="fa fa-sign-in"></span>Login</h1>
-      <form action="/login" method="post">
-        <div class="form-group">
-          <label>Email</label>
-          <input type="text" class="form-control" name="email">
-        </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" class="form-control" name="password">
-        </div>
-        <button type="submit" class="btn btn-warning btn-lg">Login</button>
-      </form>
-      <hr>
-      <p>Need to create an account?<a href="/signup"> Sign Up</a></p>
-      <!--<p> Or Go <a href="/">Home</a>.</p>-->
-    </div>
-
-    <div class="footer">
+      
+     <div class="footer">
       <div class="col-md-12">
-        <div class="foot">
-          <a id="bit" class="alink" href="../client/public/index.html">About ScoutSmart</a>
+          <div class="foot">
+            <a id="bit" class="alink" href=""/about.html"">About ScoutSmart</a>
+          </div>
+          <div class="foot">
+            <a href="http://facebook.com" target="_blank"><img class="icons" src="./assets/images/facebook.png" alt="Facebook Icon and Link"/></a>
+          </div>
+          <div class="foot">
+            <a href="http://twitter.com" target="_blank"><img class="icons" src="./assets/images/twitter.png" alt="Twitter Icon and Link"/></a>
+          </div>
+          <div class="foot">
+            <!--<a id="tandp" class="alink" href="tandp.html">Terms and Privacy</a>-->
+          </div>
+          <div class="foot">
+            <a id="show" class="alink" href="/about.html">Contact</a>
+          </div>
+          <div class="subfooter">
+            <div id="copyright">Copyright © 2018 Scout Smart</div>
+          </div>
+
         </div>
-        <div class="foot">
-          <a href="http://facebook.com" target="_blank"><img class="icons" src="./assets/images/facebook.png" alt="Facebook Icon and Link"/></a>
-        </div>
-        <div class="foot">
-          <a href="http://twitter.com" target="_blank"><img class="icons" src="./assets/images/twitter.png" alt="Twitter Icon and Link"/></a>
-        </div>
-        <div class="foot">
-          <a id="tandp" class="alink" href="tandp.html">Terms and Privacy</a>
-        </div>
-        <div class="foot">
-          <a id="contact" class="alink" href="contact.html">Contact Us</a>
-        </div>
-        <div class="subfooter">
-          <div id="copyright">Copyright © 2018 Scout Smart</div>
-        </div>
+      </div>
       </div>
     </div>
   </div>

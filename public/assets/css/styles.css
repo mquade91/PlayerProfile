@@ -1,15 +1,29 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
 body {
-    margin: 0em;
-    width: 100%;
-    height: 75%;
+    margin: 20px;
     background-color: #87CEFA;
-    background-image: url("./public/assets/images/background.jpg");
+    /*background-image: url("./public/assets/images/background.jpg");*/
     font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
+    color: #2186c8;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #2186c8;
+}
+
+#navbarDropdown {
+    color: white;
 }
 
 .login-wrapper {
@@ -22,22 +36,21 @@ h1 {
 
 .jumbotron {
     font-style: italic;
-    height: 150px;
+    height: 100px;
     margin: auto;
     text-align: center;
-    color: white;
     padding: 0;
     background-color: #87CEFA;
+
 }
 
 .login {
     text-align: center;
-
 }
 
 .footer {
-    bottom: -300px;
-    background-color: #4d85ff;
+    bottom: 0px;
+    background-color: #2186c8;
     color: white;
     text-align: center;
     display: block;
@@ -47,7 +60,7 @@ h1 {
 .foot {
     display: inline-block;
     font-size: 14px;
-    margin: 10px 20px 0px 20px;
+    margin: 10px 20px 0px;
     text-align: center;
 }
 

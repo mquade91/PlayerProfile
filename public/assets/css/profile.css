@@ -3,21 +3,40 @@ body {
 }
 
 .jumbotron {
-    border-style: solid;
-    border-color: #87cefa;
-    border-width: .5rem;
+    border-style: double;
+    border-color: #2186c8;
+    border-width: 6px;
+    width: 625px;
+    height: 350px;
+    text-align: center;
+
 
 }
 
-.dropdown-menu {
-    max-width: 10px;
+#jumbotron {
+    background-color: #87cefa;
 }
+
 
 #navbar {
     text-align: center;
     float: none;
     display: inline-block;
-    background-color: #87cefa;
+    /*background-color: #2186c8;*/
+    height: 55px;
+    padding-top: 5px;
+    margin-bottom: -5px;
+    font-style: italic;
+    color: white;
+}
+
+.container-fluid {
+    background-color: #2186c8;
+}
+
+.drop {
+    /*background-color: #2186c8;*/
+    color: red;
 }
 
 
@@ -26,45 +45,53 @@ body {
     text-align: center;
 }
 
-.container {
-    background-color: #87cefa;
-}
+/*.container {
+    */
 
-#inner-jumbotron {
-    border-style: solid;
-    border-color: #87cefa;
-    /*border-width: px;*/
-}
+/*    background-color: #87cefa;*/
 
-
+/*}*/
 
 #playerCard {
-
     text-align: center;
     background-color: white;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
 }
+
+
 
 .player-attributes {
     font-family: 'Playfair Display SC', serif;
-    color: red;
+    color: #2186c8;
     text-align: left;
-    font-size: 12px;
+    font-size: 4px;
 }
 
-.player-values,
-#playerName {
-    font-size: 22px;
+.player-values {
+    font-size: 14px;
     font-family: lucida calligraphy;
+    color: #2186c8;
 
 }
 
 #playerName {
     font-size: 30px;
+    font-family: lucida calligraphy;
 }
 
 #top5 {
     font-family: Playfair Display SC;
     font-size: 40px;
+    text-align: center;
+    color: black;
+    font-style: italic;
+}
+
+#list {
+    background-color: lightGrey;
+    color: #2186c8;
     text-align: center;
 }
 
@@ -73,35 +100,83 @@ body {
 }
 
 #card-photo {
-    border-style: double;
-    border-color: #87cefa;
-    border-width: 5px;
+    border-style: solid;
+    border-color: #2186c8;
+    border-width: 1px;
+    width: 130px;
+    height: 160px;
 }
 
 #indicators {
-    background-color: #87cefa;
+    background-color: #2186c8;
+}
+
+#navFont {
+    color: white;
 }
 
 #allPlayers {
     text-align: center;
+    margin: 10px;
 
 }
 
 .col-md-3 {
-    border-style: double;
+    border-style: solid;
+    border-width: 5px;
     border-color: white;
+    background-color: #2186c8;
+    margin-bottom: 10px;
+    color: white;
+
 }
 
+.commentScroll {
+    color: black;
+    background-color: #87cefa;
+    height: 90px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+}
+
+h2 {
+    color: #2186c8;
+    font-size: 40px;
+}
 
 h1 {
     font-family: Playfair Display SC;
     font-size: 18px;
+    color: #87cefa;
+}
+
+#caret {
+    width: 5px;
+    height: 5px;
+}
+
+#positionSelect {
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    font-size: 14px;
+    background-color: #2186c8;
+    color: white;
 }
 
 p {
 
-    color: black;
+    font-size: 13px;
+    color: white;
 
+}
+
+.navbar navbar-default {
+    background-color: #2186c8;
 }
 
 .dropdown-menu {
@@ -109,15 +184,66 @@ p {
 
 }
 
+
+fieldset, label { margin: 0; padding: 0; }
+
+.rating { 
+  border: none;
+  float: left;
+  padding-bottom: 5px;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
 @media (min-width: 1680) {
+
+    .categories {
+        width: 33%;
+    }
+
+    #card-photo {
+        width: 33%;
+    }
+
+
+
+    #carousel-container {
+        width: 1640px;
+    }
     .container {
-        width: 1640;
+        width: 1640px;
     }
 
     .jumbotron {
-        width: 16400px;
-        height: 30%;
-        width: 30%;
+        width: 100%
     }
 
     .player-attributes {
