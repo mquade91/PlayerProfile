@@ -29,6 +29,7 @@ $(document).ready(function() {
             overallRank: $("#overallRank").val().trim(),
             comment: $("#comments").val().trim(),
         };
+
         console.log("test");
         console.log(newPlayer);
 
@@ -60,25 +61,33 @@ $(document).ready(function() {
             $("#comments").val("");
 
         });
-
-
-
-
     });
 
     //Populating data from Mongo Database to allPlayers div on profile.html page
 
     function getResults() {
-        $.getJSON("/athletesInfo", function(data) {
+        $.getJSON("/athletesInfo/", function(data) {
             console.log(data);
 
 
 
             for (var i = 0; i < data.length; i++) {
-                $("#allPlayers").prepend("<div  class='col-md-3'><div class='playerCard'><div></div><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "Height: " + data[i].height + " ft" + "</p><p>" + "Weight: " + data[i].weight + " lbs" + "</p><p>" + "Dash: " + data[i].fortyTime + " s" + "</p><p>" + data[i].school + "</p><p>" + "" + data[i].position + "" + "</p></div></div>")
+                $("#allPlayers").prepend("<div  class='col-md-3'><div><br><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "<strong>Height:</strong> " + data[i].height + " ft" + "</p><p>" + "<strong>Weight:</strong> " + data[i].weight + " lbs" + "</p><p>" + "<strong> Dash:</strong> " + data[i].fortyTime + " s" + "</p><p>" + "<strong>Postion Rating:</strong> " + data[i].positionRating + "</p><p>" + "<strong>Overall Rank:</strong> " + data[i].overallRank + "</p>" + "" + data[i].position + "</p><p>" + data[i].school + "</p><div class='commentScroll'>" +
+                    data[i].comment + "</div></div>")
             }
-        })
+        });
     }
     getResults()
 
+    $("#positionSelect").change(function() {
+        let position = $("#positionSelect option:selected").text()
+        console.log(position)
+        $.getJSON("/athletesInfo/position/" + position, function(data) {
+            $("#allPlayers").empty()
+            for (var i = 0; i < data.length; i++) {
+                $("#allPlayers").prepend("<div  class='col-md-3'><div><br><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "<strong>Height:</strong> " + data[i].height + " ft" + "</p><p>" + "<strong>Weight:</strong> " + data[i].weight + " lbs" + "</p><p>" + "<strong> Dash:</strong> " + data[i].fortyTime + " s" + "</p><p>" + "<strong>Postion Rating:</strong> " + data[i].positionRating + "</p><p>" + "<strong>Overall Rank:</strong> " + data[i].overallRank + "</p>" + "" + data[i].position + "</p><p>" + data[i].school + "</p><div class='commentScroll'>" +
+                    data[i].comment + "</div></div>")
+            }
+        })
+    })
 });
