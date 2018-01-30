@@ -60,37 +60,30 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="drop" class="active"><a id="navFont" href="#">Show My Players</a></li>
+                                <li class="drop" class="active"><a id="navFont" href="/athletesInfo">Show My Players</a></li>
 
                                 <select name="position" id="positionSelect">
-                                    <option selected="selected" disabled="disabled" value="none">Players By Position</option>
-                                    <option id="list" value="QB">QB</option>
-                                    <option id="list"  value="RB">RB</option>
-                                    <option id="list"  value="FB">FB</option>
-                                    <option id="list"  value="WR">WR</option>
-                                    <option id="list"  value="TE">TE</option>
-                                    <option id="list"  value="OL">OL</option>
-                                    <option id="list"  value="DL">DL</option>
-                                    <option id="list"  value="LB">LB</option>
-                                    <option id="list"  value="DB">DB</option>
-                                    <option id="list"  value="FS">FS</option>
-                                    <option id="list"  value="SS">SS</option>
-                                    <option id="list"  value="K">K</option>
-                                    <option id="list"  value="P">P</option>
+                                    <option selected="selected" value="none">Players By Position</option>
+                                    <option class="options" id="list" value="QB">QB</option>
+                                    <option id="plist"  value="RB">RB</option>
+                                    <option id="plist"  value="FB">FB</option>
+                                    <option id="plist"  value="WR">WR</option>
+                                    <option id="plist"  value="TE">TE</option>
+                                    <option id="plist"  value="OL">OL</option>
+                                    <option id="plist"  value="DL">DL</option>
+                                    <option id="plist"  value="LB">LB</option>
+                                    <option id="plist"  value="DB">DB</option>
+                                    <option id="plist"  value="FS">FS</option>
+                                    <option id="plist"  value="SS">SS</option>
+                                    <option id="plist"  value="K">K</option>
+                                    <option id="plist"  value="P">P</option>
                                 </select>
                                 <!--style="width:75px;height:50px-->
-
-
-                                <li class="drop">
-                                    <a id="navFont" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Players By Rank <span id="caret" class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Best to Worst</a></li>
-                                        <li><a href="#">Worst to Best</a></li>
-
-                                        <li role="separator" class="divider"></li>
-
-                                    </ul>
-                                </li>
+                                <select name="ranking" id="rankingSelect">
+                                    <option selected="selected" value="none">Players By Rank</option>
+                                    <option id="rlist" value="BTW">Best to Worst</option>
+                                    <option id="rlist"  value="WTB">Worst to Best</option>
+                                </select>
                             </ul>
                         </div>
                         <!-- /.navbar-collapse -->
@@ -104,15 +97,11 @@
     </div>
     <h5 id="top5">Top 5 Talents Showcase</h5>
 
-
-
-
     <div class="container" id="jumbotron">
-
 
         <div class="jumbotron center-block" style="background-color:white">
 
-            <div id="carousel-container" style="margin: 0 auto">
+            <div id="carousel-container">
 
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -133,8 +122,8 @@
                                 <h5 id="playerName"><a href="https://www.google.com">Player Name</a></h5>
                                 <div class="row"></div>
                                 <div class="row">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-5">
                                         <ul style="list-style: none;" class="player-attributes">
                                             <li id="height" class="categories">Height: <span class="player-values" id="height">1</span></li>
                                             <br>
@@ -148,10 +137,11 @@
                                         </ul>
 
                                     </div>
+                                    <div class="col-sm-1"></div>
                                     <div class="col-md-4">
-                                        <a target="_blank" href="#"><img id="card-photo" src="http://via.placeholder.com/165X190"></a>
+                                        <a target="_blank" href="#"><img id="card-photo" src="http://via.placeholder.com/130X150"></a>
                                     </div>
-                                    <div class="col-md-2"></div>
+
                                 </div>
                             </div>
                         </div>
@@ -161,8 +151,8 @@
                                 <h5 id="playerName"><a href="https://www.google.com">Player Name</a></h5>
                                 <div class="row"></div>
                                 <div class="row">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-5">
                                         <ul style="list-style: none;" class="player-attributes">
                                             <li id="height" class="categories">Height: <span class="player-values" id="height">2</span></li>
                                             <br>
@@ -176,10 +166,11 @@
                                         </ul>
 
                                     </div>
+                                    <div class="col-sm-1"></div>
                                     <div class="col-md-4">
-                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/165X190"></a>
+                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/130X150"></a>
                                     </div>
-                                    <div class="col-md-2"></div>
+                                    <!--<div class="col-md-2"></div>-->
                                 </div>
                             </div>
                         </div>
@@ -189,8 +180,8 @@
                                 <h5 id="playerName"><a href="https://www.google.com">Player Name</a></h5>
                                 <div class="row"></div>
                                 <div class="row">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-5">
                                         <ul style="list-style: none;" class="player-attributes">
                                             <li id="height" class="categories">Height: <span class="player-values" id="height">3</span></li>
                                             <br>
@@ -204,10 +195,11 @@
                                         </ul>
 
                                     </div>
+                                    <div class="col-sm-1"></div>
                                     <div class="col-md-4">
-                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/165X190"></a>
+                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/130X150"></a>
                                     </div>
-                                    <div class="col-md-2"></div>
+                                    <!--<div class="col-md-2"></div>-->
                                 </div>
                             </div>
                         </div>
@@ -217,8 +209,8 @@
                                 <h5 id="playerName"><a href="https://www.google.com">Player Name</a></h5>
                                 <div class="row"></div>
                                 <div class="row">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-5">
                                         <ul style="list-style: none;" class="player-attributes">
                                             <li id="height" class="categories">Height: <span class="player-values" id="height">4</span></li>
                                             <br>
@@ -232,10 +224,11 @@
                                         </ul>
 
                                     </div>
+                                    <div class="col-sm-1"></div>
                                     <div class="col-md-4">
-                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/165X190"></a>
+                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/130X150"></a>
                                     </div>
-                                    <div class="col-md-2"></div>
+                                    <!--<div class="col-md-2"></div>-->
                                 </div>
                             </div>
                         </div>
@@ -245,8 +238,8 @@
                                 <h5 id="playerName"><a href="https://www.google.com">Player Name</a></h5>
                                 <div class="row"></div>
                                 <div class="row">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-5">
                                         <ul style="list-style: none;" class="player-attributes">
                                             <li id="height" class="categories">Height: <span class="player-values" id="height">5</span></li>
                                             <br>
@@ -260,10 +253,11 @@
                                         </ul>
 
                                     </div>
+                                    <div class="col-sm-1"></div>
                                     <div class="col-md-4">
-                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/165X190"></a>
+                                        <a target="_blank" href="https://www.google.com"><img id="card-photo" src="http://via.placeholder.com/130X150"></a>
                                     </div>
-                                    <div class="col-md-2"></div>
+                                    <!--<div class="col-md-2"></div>-->
                                 </div>
                             </div>
                         </div>
@@ -285,12 +279,14 @@
         </div>
     </div>
     <br>
-    <div id="allPlayers" class="row">
 
-        <!--<div id="card" class="col-md-3">-->
-        <!--</div>-->
 
+    <div class="container" id="playerContainer">
+        <div id="allPlayers" class="row"></div>
     </div>
+
+
+
     <script src="./assets/scripts/script.js"></script>
 
     <br>

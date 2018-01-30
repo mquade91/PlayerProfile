@@ -16,6 +16,7 @@ var UserSchema = Schema({
     firstName: String,
     lastName: String,
     areaCovered: String,
+    contact:Number
   },
   
   athletes:[{
