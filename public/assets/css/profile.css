@@ -30,6 +30,11 @@ body {
     color: white;
 }
 
+#carousel-container {
+    /*width: 30%;*/
+    position: relative;
+}
+
 .container-fluid {
     background-color: #2186c8;
 }
@@ -45,29 +50,6 @@ body {
     text-align: center;
 }
 
-/*.container {
-    */
-
-/*    background-color: #87cefa;*/
-
-/*}*/
-
-#playerCard {
-    text-align: center;
-    background-color: white;
-    border-style: solid;
-    border-width: 5px;
-    border-color: white;
-}
-
-
-
-.player-attributes {
-    font-family: 'Playfair Display SC', serif;
-    color: #2186c8;
-    text-align: left;
-    font-size: 4px;
-}
 
 .player-values {
     font-size: 14px;
@@ -89,14 +71,55 @@ body {
     font-style: italic;
 }
 
-#list {
+/*Navbar dropdown lists*/
+
+#navFont {
+    color: white;
+}
+
+#positionSelect {
+    text-align: center;
+    width: 158px;
+    height: 50px;
+    font-size: 14px;
+    background-color: #2186c8;
+    color: white;
+    border-style: none;
+}
+
+#plist {
     background-color: lightGrey;
     color: #2186c8;
     text-align: center;
 }
 
+#rankingSelect {
+    text-align: center;
+    width: 158px;
+    height: 50px;
+    font-size: 14px;
+    background-color: #2186c8;
+    color: white;
+    border-style: none;
+}
+
+#rlist {
+    background-color: lightGrey;
+    color: #2186c8;
+    text-align: center;
+}
+
+#playerContainer {
+    width: 75%;
+    text-align: center;
+    margin-right: 50px;
+}
+
 .categories {
-    font-size: 18px;
+    font-size: 12px;
+    font-family: 'Playfair Display SC', serif;
+    color: #2186c8;
+    text-align: left;
 }
 
 #card-photo {
@@ -104,16 +127,14 @@ body {
     border-color: #2186c8;
     border-width: 1px;
     width: 130px;
-    height: 160px;
+    height: 170px;
 }
 
 #indicators {
     background-color: #2186c8;
 }
 
-#navFont {
-    color: white;
-}
+
 
 #allPlayers {
     text-align: center;
@@ -128,7 +149,13 @@ body {
     background-color: #2186c8;
     margin-bottom: 10px;
     color: white;
+    margin-right: 10px;
 
+}
+
+.glyphicon-chevron-left,
+.glyphicon-chevron-right {
+    color: #2186c8;
 }
 
 .commentScroll {
@@ -141,6 +168,7 @@ body {
     border-style: solid;
     border-color: white;
     border-width: 1px;
+    font-size: 14px;
 }
 
 h2 {
@@ -159,14 +187,7 @@ h1 {
     height: 5px;
 }
 
-#positionSelect {
-    text-align: center;
-    width: 150px;
-    height: 50px;
-    font-size: 14px;
-    background-color: #2186c8;
-    color: white;
-}
+
 
 p {
 
@@ -184,56 +205,89 @@ p {
 
 }
 
+/*CSS for stars*/
 
-fieldset, label { margin: 0; padding: 0; }
-
-.rating { 
-  border: none;
-  float: left;
-  padding-bottom: 5px;
+fieldset,
+label {
+    margin: 0;
+    padding: 0;
 }
 
-.rating > input { display: none; } 
-.rating > label:before { 
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
+.rating {
+    border: none;
+    float: left;
+    padding-bottom: 5px;
 }
 
-.rating > .half:before { 
-  content: "\f089";
-  position: absolute;
+.rating>input {
+    display: none;
 }
 
-.rating > label { 
-  color: #ddd; 
- float: right; 
+.rating>label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating>.half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating>label {
+    color: #ddd;
+    float: right;
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
 
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating>input:checked~label,
+/* show gold star when clicked */
 
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+.rating:not(:checked)>label:hover,
+/* hover current star */
+
+.rating:not(:checked)>label:hover~label {
+    color: #FFD700;
+}
+
+/* hover previous stars in list */
+
+.rating>input:checked+label:hover,
+/* hover current star when changing rating */
+
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+/* lighten current selection */
+
+.rating>input:checked~label:hover~label {
+    color: #FFED85;
+}
 
 @media (min-width: 1680) {
 
+    #myCarousel {
+        width: 100%;
+    }
+
+
+    #carousel-container {
+        width: 30%;
+    }
+
+    .navbar {
+        width: 1640px;
+    }
+
     .categories {
-        width: 33%;
+        width: 100%;
     }
 
     #card-photo {
-        width: 33%;
+        width: 100%;
     }
-
-
 
     #carousel-container {
         width: 1640px;
