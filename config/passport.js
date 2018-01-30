@@ -47,14 +47,10 @@ module.exports = function(passport) {
                         //set credentials for user
                         newUser.local.email = email;
                         newUser.local.password = newUser.generateHash(password);
+                        newUser.info.contact = req.body.contact;
                         newUser.info.firstName = req.body.firstName;
                         newUser.info.lastName = req.body.lastName;
                         newUser.info.areaCovered = req.body.areaCovered;
-                        // {
-                        //     firstName: ,
-                        //     lastName: lastName,
-                        //     areaCovered: areaCovered
-                        // };
                         //save the user
                         newUser.save(function(err) {
                             if (err)
@@ -81,7 +77,7 @@ module.exports = function(passport) {
             User.findOne({ 'local.email': email }, function(err, User) {
                 if (err)
                     return done(err);
-                //if no Scout
+                //if no User
                 if (!User)
                     return done(null, false, req.flash('loginMessage', 'No Scout found.'));
                 //if password is not valid
