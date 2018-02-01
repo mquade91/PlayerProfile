@@ -38,12 +38,8 @@ module.exports = function(app, passport) {
         successRedirect: '/profile', //secure profile page
         failureRedirect: '/signup', //signup page
         failureFlash: true //allow flash messages
-        
-    
+
     }));
-        
-        
-   
 
     //GET all USER INFO (using to check populate)
     app.get('/users', function(req, res) {
