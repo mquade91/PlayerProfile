@@ -13,6 +13,8 @@ db.on("error", function(error) {
   console.log("Database Error:", error);
 });
 
+var MONGODB_URI = "process.env.mongodb://heroku_pmw9htx3:mo8aa296k12ig7p747qfeimuls@ds221148.mlab.com:21148/heroku_pmw9htx3" || "mongodb://localhost/mongoHeadlines";
+
 module.exports = {
   'url': process.env.MONGODB_URI || "mongodb://localhost/playerProfile"
 };
