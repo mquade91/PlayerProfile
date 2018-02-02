@@ -46,8 +46,8 @@ $(document).ready(function() {
                 alert("Fail! Try again!");
             }
 
-            // Clear the form when submitting
-
+        });
+        // Clear the form when submitting
             $("#firstname").val("");
             $("#lastname").val("");
             $("#height").val("");
@@ -60,7 +60,6 @@ $(document).ready(function() {
             $("#overallRank").val("");
             $("#comments").val("");
 
-        });
     });
 
     //Populating data from Mongo Database to allPlayers div on profile.html page
