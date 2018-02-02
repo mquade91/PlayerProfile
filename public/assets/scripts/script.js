@@ -46,21 +46,19 @@ $(document).ready(function() {
                 alert("Fail! Try again!");
             }
 
-            // Clear the form when submitting
-
+        });
+        // Clear the form when submitting
             $("#firstname").val("");
             $("#lastname").val("");
             $("#height").val("");
             $("#weight").val("");
             $("#dash").val("");
             $("#school").val("");
-
             $("#position").val("");
             $("#positionRating").val("");
             $("#overallRank").val("");
             $("#comments").val("");
 
-        });
     });
 
     //Populating data from Mongo Database to allPlayers div on profile.html page
@@ -70,50 +68,51 @@ $(document).ready(function() {
             console.log(data);
 
             for (var i = 0; i < data.length; i++) {
-                $("#allPlayers").prepend("<div  class='col-md-3'><div><br><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "<strong>Height:</strong> " + data[i].height + " ft" + "</p><p>" + "<strong>Weight:</strong> " + data[i].weight + " lbs" + "</p><p>" + "<strong> Dash:</strong> " + data[i].fortyTime + " s" + "</p><p>" + "<strong>Postion Rating:</strong> " + data[i].positionRating + "</p><p>" + "<strong>Overall Rank:</strong> " + data[i].overallRank + "</p>" + "" + data[i].position + "</p><p>" + data[i].school + "</p><div class='commentScroll'>" +
-                    data[i].comment + "</div></div>")
+                $("#allPlayers").prepend("<div  class='col-md-3'><div><br><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p><strong>Height: </strong>" + data[i].height + "</p><p><strong>Weight:</strong> " + data[i].weight + " lbs" + "</p><p><strong> 40 yd Dash:</strong> " + data[i].fortyTime + " s" + "</p><p><strong>Postion Rating: </strong> " + data[i].positionRating + "</p><p>" 
+                + "<strong>Overall Rank:</strong> " + data[i].overallRank + "</p><p><strong>Postion: </strong>" + data[i].position + "</p><p><strong>School: </strong>" + data[i].school + "</p><div class='commentScroll'>" +
+                    data[i].comment + "</div></div>");
             }
         });
     }
-    getResults()
+    getResults();
 
     $("#positionSelect").change(function() {
-        let position = $("#positionSelect option:selected").text()
-        console.log(position)
-      
+        let position = $("#positionSelect option:selected").text();
+        console.log(position);
+
         $.getJSON("/athletesInfo/position/" + position, function(data) {
-            $("#allPlayers").empty()
+            $("#allPlayers").empty();
             for (var i = 0; i < data.length; i++) {
-                $("#allPlayers").prepend("<div  class='col-md-3'><div><br><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "<strong>Height:</strong> " + data[i].height + " ft" + "</p><p>" + "<strong>Weight:</strong> " + data[i].weight + " lbs" + "</p><p>" + "<strong> Dash:</strong> " + data[i].fortyTime + " s" + "</p><p>" + "<strong>Postion Rating:</strong> " + data[i].positionRating + "</p><p>" + "<strong>Overall Rank:</strong> " + data[i].overallRank + "</p>" + "" + data[i].position + "</p><p>" + data[i].school + "</p><div class='commentScroll'>" +
-                    data[i].comment + "</div></div>")
-            }
-        })
-    })
-
-    //FOR RANKING SORTING
-    function getRankings() {
-        $.getJSON("/athletesInfo/worstToBest", function(data) {
-            console.log(data);
-
-            for (var i = 0; i < data.length; i++) {
-                $("#allPlayers").prepend("<div  class='col-md-3'><div><br><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "<strong>Height:</strong> " + data[i].height + " ft" + "</p><p>" + "<strong>Weight:</strong> " + data[i].weight + " lbs" + "</p><p>" + "<strong> Dash:</strong> " + data[i].fortyTime + " s" + "</p><p>" + "<strong>Postion Rating:</strong> " + data[i].positionRating + "</p><p>" + "<strong>Overall Rank:</strong> " + data[i].overallRank + "</p>" + "" + data[i].position + "</p><p>" + data[i].school + "</p><div class='commentScroll'>" +
-                    data[i].comment + "</div></div>")
+                $("#allPlayers").prepend("<div  class='col-md-3'><div><br><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p><strong>Height:</strong> " + data[i].height + " ft" + "</p><p>" + "<strong>Weight:</strong> " + data[i].weight + " lbs" + "</p><p>" + "<strong> 40 yd Dash:</strong> " + data[i].fortyTime + " s" + "</p><p>" + "<strong>Postion Rating:</strong> " + data[i].positionRating + "</p><p>" + "<strong>Overall Rank:</strong> " + data[i].overallRank + "</p>" + "<strong> Position: </strong>" + data[i].position + "</p><p><strong>School: </strong>" + data[i].school + "</p><div class='commentScroll'>" +
+                    data[i].comment + "</div></div>");
             }
         });
-    }
-    getRankings()
+    });
 
-    $("#rankingSelect").change(function() {
-        let ranking = $("#rankingSelect option:selected").text()
-        console.log(ranking)
-      
-        $.getJSON("/athletesInfo/worstToBest/" + ranking, function(data) {
-            $("#allPlayers").empty()
-            for (var i = 0; i < data.length; i++) {
-                $("#allPlayers").prepend("<div  class='col-md-3'><div><br><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "<strong>Height:</strong> " + data[i].height + " ft" + "</p><p>" + "<strong>Weight:</strong> " + data[i].weight + " lbs" + "</p><p>" + "<strong> Dash:</strong> " + data[i].fortyTime + " s" + "</p><p>" + "<strong>Postion Rating:</strong> " + data[i].positionRating + "</p><p>" + "<strong>Overall Rank:</strong> " + data[i].overallRank + "</p>" + "" + data[i].position + "</p><p>" + data[i].school + "</p><div class='commentScroll'>" +
-                    data[i].comment + "</div></div>")
-            }
-        })
-    })
+    // //FOR RANKING SORTING
+    // function getRankings() {
+    //     $.getJSON("/athletesInfo/worstToBest", function(data) {
+    //         console.log(data);
+
+    //         for (var i = 0; i < data.length; i++) {
+    //             $("#allPlayers").prepend("<div  class='col-md-3'><div><br><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "<strong>Height:</strong> " + data[i].height + "</p><p>" + "<strong>Weight:</strong> " + data[i].weight + " lbs" + "</p><p>" + "<strong> Dash:</strong> " + data[i].fortyTime + " s" + "</p><p>" + "<strong>Postion Rating:</strong> " + data[i].positionRating + "</p><p>" + "<strong>Overall Rank:</strong> " + data[i].overallRank + "</p>" + "" + data[i].position + "</p><p>" + data[i].school + "</p><div class='commentScroll'>" +
+    //                 data[i].comment + "</div></div>")
+    //         }
+    //     });
+    // }
+    // getRankings()
+
+    // $("#rankingSelect").change(function() {
+    //     let ranking = $("#rankingSelect option:selected").text()
+    //     console.log(ranking)
+
+    //     $.getJSON("/athletesInfo/worstToBest/" + ranking, function(data) {
+    //         $("#allPlayers").empty()
+    //         for (var i = 0; i < data.length; i++) {
+    //             $("#allPlayers").prepend("<div  class='col-md-3'><div><br><img src='./assets/images/logo.png' height='25px' width='45px'><h1>" + data[i].firstName + " " + data[i].lastName + "</h1><p>" + "<strong>Height:</strong> " + data[i].height + "</p><p>" + "<strong>Weight:</strong> " + data[i].weight + " lbs" + "</p><p>" + "<strong> Dash:</strong> " + data[i].fortyTime + " s" + "</p><p>" + "<strong>Postion Rating:</strong> " + data[i].positionRating + "</p><p>" + "<strong>Overall Rank:</strong> " + data[i].overallRank + "</p>" + "" + data[i].position + "</p><p>" + data[i].school + "</p><div class='commentScroll'>" +
+    //                 data[i].comment + "</div></div>")
+    //         }
+    //     })
+    // })
 
 });

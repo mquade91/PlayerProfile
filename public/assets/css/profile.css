@@ -171,9 +171,11 @@ body {
     font-size: 14px;
 }
 
-h2 {
-    color: #2186c8;
+#ss {
+    color: black;
     font-size: 40px;
+    font-style: italic;
+    letter-spacing: 1.5px
 }
 
 h1 {
