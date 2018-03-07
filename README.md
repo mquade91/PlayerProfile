@@ -23,7 +23,7 @@ This web application is a basic CRM tool that can be utilizied across many indus
 ![Athletes Page](/images/athletesPage1.png)
 
 ## Athletes' Cards
-![Athletes' Cards](/images/athletesCards.png)
+![Athletes' Cards](/images/athleteCards.png)
 
 ## New Athlete Form
 ![New Athlete Form](/images/newAthleteForm.png)
