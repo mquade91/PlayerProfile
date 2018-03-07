@@ -17,13 +17,13 @@ This web application is a basic CRM tool that can be utilizied across many indus
 ![Login Page](/images/loginPage.png)
 
 ## Employee Directory Page
-[Employee Directory Page](/images/employeeDirectoryPage.png)
+![Employee Directory Page](/images/employeeDirectoryPage.png)
 
 ## Athletes Page
-[Athletes Page](/images/athletesPage1.png)
+![Athletes Page](/images/athletesPage1.png)
 
 ## Athletes' Cards
-[Athletes' Cards](/images/athletesCards.png)
+![Athletes' Cards](/images/athletesCards.png)
 
 ## New Athlete Form
-[New Athlete Form](/images/newAthleteForm.png)
+![New Athlete Form](/images/newAthleteForm.png)
