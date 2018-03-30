@@ -53,18 +53,18 @@ body {
 
 .player-values {
     font-size: 14px;
-    font-family: lucida calligraphy;
+    font-family: 'Montserrat', sans-serif;
     color: #2186c8;
 
 }
 
 #playerName {
     font-size: 30px;
-    font-family: lucida calligraphy;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #top5 {
-    font-family: Playfair Display SC;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     text-align: center;
     color: black;
@@ -179,7 +179,7 @@ body {
 }
 
 h1 {
-    font-family: Playfair Display SC;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     color: #87cefa;
 }
