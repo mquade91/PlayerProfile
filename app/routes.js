@@ -135,8 +135,6 @@ module.exports = function (app, passport) {
         });
     });
 
-
-
     //GET ALL ATHLETES by overallRank worst to best
     app.get('/athletesInfo/worstToBest', function (req, res) {
       db.Athlete
@@ -173,8 +171,6 @@ module.exports = function (app, passport) {
 
 
   });
-
-
 };
 //ROUTE GUARD
 //route middleware to make sure a user is logged in

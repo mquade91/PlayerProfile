@@ -7,7 +7,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/newPlayer.css" type="text/css" />
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
@@ -20,57 +21,69 @@
   <div class="container">
     <div class="col-md-12" id="header">
       <span>
-        <h1 id="ss">SmartScout<img id="panthers" src="./assets/images/logo.png" width="100px"></h1>
-         </span>
-        <a href = "/profile"><button>Users Page</button></a>
-        <a href = "/athletes"><button>Current Athletes</button></a>
-     
+        <h1 id="ss">SmartScout
+          <img id="panthers" src="./assets/images/logo.png" width="100px">
+        </h1>
+      </span>
+      <a href="/profile">
+        <button>Users Page</button>
+      </a>
+      <a href="/athletes">
+        <button>Current Athletes</button>
+      </a>
+
     </div>
     <form>
       <h2>New Athlete Information</h2>
       <div class="form-group">
-        <input type="text" class="form-control" id="firstname" aria-describedby="firstname" placeholder="Enter First Name">
+        <input type="text" class="form-control" id="firstname" aria-describedby="firstname" placeholder="First Name">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" id="lastname" aria-describedby="lastname" placeholder="Enter Last Name">
+        <input type="text" class="form-control" id="lastname" aria-describedby="lastname" placeholder="Last Name">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" id="height" aria-describedby="height" placeholder="Enter Height in ft.">
+        <input type="text" class="form-control" id="height" aria-describedby="height" placeholder="Height in ft.">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" id="weight" aria-describedby="weight" placeholder="Enter Weight in lbs.">
+        <input type="text" class="form-control" id="weight" aria-describedby="weight" placeholder="Weight in lbs.">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" id="dash" aria-describedby="dash" placeholder="Enter 40yard dash time in sec.">
+        <input type="text" class="form-control" id="dash" aria-describedby="dash" placeholder="40yard dash time in sec.">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" id="school" aria-describedby="school" placeholder="Enter School">
+        <input type="text" class="form-control" id="school" aria-describedby="school" placeholder="School">
       </div>
       <div class="form-group">
-        <select class="form-control" id="position">
-                <option>QB</option>
-                <option>RB</option>
-                <option>FB</option>
-                <option>WR</option>
-                <option>TE</option>
-                <option>OL</option>
-                <option>DL</option>
-                <option>LB</option>
-                <option>DB</option>
-                <option>FS</option>
-                <option>SS</option>
-                <option>K</option>
-                <option>P</option>
-          </select>
+        <select required class="form-control" id="position">
+          <option default value="" selected>Position</option>
+          <option>QB</option>
+          <option>RB</option>
+          <option>FB</option>
+          <option>WR</option>
+          <option>TE</option>
+          <option>OL</option>
+          <option>DL</option>
+          <option>LB</option>
+          <option>DB</option>
+          <option>FS</option>
+          <option>SS</option>
+          <option>K</option>
+          <option>P</option>
+        </select>
       </div>
       <div class="positionRating">
         <h3>Enter Position Rating</h3>
         <fieldset class="rating">
-          <input type="radio" id="star1" name="rating" value=1 /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
-          <input type="radio" id="star2" name="rating" value=2 /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
-          <input type="radio" id="star3" name="rating" value=3 /><label class="full" for="star3" title="Meh - 3 stars"></label>
-          <input type="radio" id="star4" name="rating" value=4 /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
-          <input type="radio" id="star5" name="rating" value=5 /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+          <input type="radio" id="star1" name="rating" value=1 />
+          <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+          <input type="radio" id="star2" name="rating" value=2 />
+          <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+          <input type="radio" id="star3" name="rating" value=3 />
+          <label class="full" for="star3" title="Meh - 3 stars"></label>
+          <input type="radio" id="star4" name="rating" value=4 />
+          <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+          <input type="radio" id="star5" name="rating" value=5 />
+          <label class="full" for="star5" title="Awesome - 5 stars"></label>
         </fieldset>
       </div>
       <div class="form-group">
@@ -91,10 +104,14 @@
         <a id="bit" class="alink" href="../playerprofile/public/index.html">About ScoutSmart</a>
       </div>
       <div class="foot">
-        <a href="http://facebook.com" target="_blank"><img class="icons" src="./assets/images/facebook.png" alt="Facebook Icon and Link"/></a>
+        <a href="http://facebook.com" target="_blank">
+          <img class="icons" src="./assets/images/facebook.png" alt="Facebook Icon and Link" />
+        </a>
       </div>
       <div class="foot">
-        <a href="http://twitter.com" target="_blank"><img class="icons" src="./assets/images/twitter.png" alt="Twitter Icon and Link"/></a>
+        <a href="http://twitter.com" target="_blank">
+          <img class="icons" src="./assets/images/twitter.png" alt="Twitter Icon and Link" />
+        </a>
       </div>
       <div class="foot">
         <a id="contact" class="alink" href="contact.html">Contact Us</a>
